@@ -12,7 +12,7 @@ window.PORTFOLIO_DATA = {
       "Data-driven analyst with experience in financial modeling, forecasting, and portfolio strategy, focused on translating financial data into actionable insights.",
     location: "New Jersey, United States",
     program: "Master's in Financial Analysis | Rutgers University",
-    email: "kirtanapatel11@gmail.com",
+    email: "kvp80@scarletmail.rutgers.edu",
     linkedin: "https://www.linkedin.com/in/your-linkedin/",
     resumeLink: "./Resume - Kirtana Patel.pdf",
     footerNote: "Kirtana Patel | Financial Analysis Portfolio",

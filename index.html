@@ -3,38 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kirtana Patel | Portfolio</title>
+    <title>Kirtana Patel | Financial Portfolio</title>
     <meta
       name="description"
-      content="Premium portfolio of Kirtana Patel featuring finance-focused experience, projects, case studies, and certifications."
+      content="Finance-focused portfolio of Kirtana Patel, Master's in Financial Analysis student at Rutgers University."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="background-grid"></div>
-    <div class="aurora aurora-top"></div>
-    <div class="aurora aurora-bottom"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-top"></div>
+    <div class="bg-glow bg-glow-bottom"></div>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Back to top">
+      <a href="#top" class="brand" aria-label="Back to top">
         <span id="logo-initials" class="brand-mark">KP</span>
-        <span class="brand-text">
-          <span>Investment-Focused Portfolio</span>
-        </span>
+        <span class="brand-text">Financial Analysis Portfolio</span>
       </a>
       <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">Menu</button>
       <nav id="site-nav" class="site-nav">
-        <a href="#thesis">Thesis</a>
+        <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#case-studies">Case Studies</a>
-        <a href="#certifications">Credentials</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -43,102 +42,86 @@
       <section class="panel hero reveal">
         <div class="hero-grid">
           <div>
-            <p id="hero-role" class="eyebrow"></p>
+            <p id="hero-title" class="kicker"></p>
             <h1 id="hero-name"></h1>
-            <p id="hero-tagline" class="hero-tagline"></p>
-
-            <ul id="impression-strip" class="impression-strip"></ul>
-
-            <div class="meta-row">
-              <span id="hero-location"></span>
-              <span id="hero-availability"></span>
-            </div>
-
-            <ul id="target-roles-list" class="target-roles-list"></ul>
-
+            <p id="hero-value" class="hero-value"></p>
+            <ul id="target-roles" class="target-roles"></ul>
             <div class="cta-row">
-              <a id="resume-cta" class="btn btn-gold" href="#" target="_blank" rel="noopener"
+              <a id="resume-cta" href="#" class="btn btn-gold" target="_blank" rel="noopener"
                 >Download Resume</a
               >
-              <a id="email-cta" class="btn btn-line" href="#">Email Contact</a>
+              <a id="contact-cta" href="#contact" class="btn btn-line">Contact</a>
             </div>
-
-            <ul id="social-links" class="social-links"></ul>
           </div>
-
-          <aside class="signal-card">
-            <p class="signal-title">Strategic Snapshot</p>
-            <div id="highlights-grid" class="highlights-grid"></div>
+          <aside class="framework-card">
+            <p class="kicker">Analyst Thinking Framework</p>
+            <ol id="analyst-framework" class="framework-list"></ol>
+            <div class="hero-meta">
+              <p id="hero-location"></p>
+              <p id="hero-program"></p>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section id="thesis" class="panel reveal">
-        <h2>Investment Thesis</h2>
-        <p id="about-intro" class="lead"></p>
-        <p id="about-story" class="story"></p>
-        <div class="split">
-          <div>
-            <h3>How I Operate</h3>
-            <ul id="work-style-list" class="list"></ul>
-          </div>
-          <div>
-            <h3>Strategic Edge</h3>
-            <ul id="differentiators-list" class="list"></ul>
-          </div>
-        </div>
-        <div class="interest-block">
-          <h3>Beyond Work</h3>
-          <div id="interests-row" class="chip-row"></div>
-        </div>
+      <section id="about" class="panel reveal">
+        <h2>About</h2>
+        <div id="about-lines" class="about-lines"></div>
       </section>
 
       <section id="experience" class="panel reveal">
         <h2>Experience</h2>
-        <div id="experience-timeline" class="timeline"></div>
+        <div id="experience-grid" class="experience-grid"></div>
       </section>
 
-      <section id="projects" class="panel reveal">
+      <section id="projects" class="panel panel-projects reveal">
         <h2>Projects</h2>
-        <div id="projects-grid" class="projects-grid"></div>
+        <p class="section-intro">
+          Priority work samples focused on valuation thinking, modeling discipline, and structured
+          financial decision support.
+        </p>
+        <div id="projects-stack" class="projects-stack"></div>
       </section>
 
-      <section id="case-studies" class="panel reveal">
-        <h2>Case Studies</h2>
-        <div id="case-studies-grid" class="case-grid"></div>
+      <section id="skills" class="panel reveal">
+        <h2>Skills</h2>
+        <div id="skills-grid" class="skills-grid"></div>
       </section>
 
       <section id="certifications" class="panel reveal">
-        <h2>Certifications & Academic Foundation</h2>
-        <div class="split">
-          <div>
-            <h3>Certifications</h3>
-            <div id="certifications-list" class="card-stack"></div>
-          </div>
-          <div>
-            <h3>Education</h3>
-            <div id="education-list" class="card-stack"></div>
-          </div>
-        </div>
-        <div class="toolkit">
-          <h3>Analytical Toolkit</h3>
-          <div id="skills-grid" class="skills-grid"></div>
-        </div>
+        <h2>Certifications</h2>
+        <div id="certifications-grid" class="certifications-grid"></div>
+      </section>
+
+      <section id="leadership" class="panel reveal">
+        <h2>Leadership & Extracurriculars</h2>
+        <div id="leadership-grid" class="leadership-grid"></div>
       </section>
 
       <section id="contact" class="panel contact-panel reveal">
-        <h2>Open To Analyst Opportunities</h2>
-        <p id="contact-message" class="lead"></p>
+        <h2>Contact</h2>
+        <p id="contact-line" class="contact-line"></p>
+        <div class="contact-details">
+          <p>
+            Email:
+            <a id="email-text-link" href="#">kirtanapatel11@gmail.com</a>
+          </p>
+          <p>
+            LinkedIn:
+            <a id="linkedin-link" href="#" target="_blank" rel="noopener">View Profile</a>
+          </p>
+        </div>
         <div class="cta-row">
-          <a id="email-link" class="btn btn-gold" href="#">Email Contact</a>
-          <a id="linkedin-link" class="btn btn-line" href="#" target="_blank" rel="noopener"
-            >LinkedIn</a
+          <a id="email-cta" href="#" class="btn btn-gold">Email Contact</a>
+          <a id="resume-contact-cta" href="#" class="btn btn-line" target="_blank" rel="noopener"
+            >Download Resume</a
           >
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
+      <ul id="social-links" class="social-links"></ul>
       <p id="footer-line"></p>
     </footer>
 

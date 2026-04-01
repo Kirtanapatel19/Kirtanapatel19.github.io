@@ -2,20 +2,27 @@
   const data = window.PORTFOLIO_DATA;
   if (!data) return;
 
+  const byId = (id) => document.getElementById(id);
+
   const setText = (id, value) => {
-    const el = document.getElementById(id);
+    const el = byId(id);
     if (el) el.textContent = value || "";
   };
 
-  const setAttr = (id, attr, value) => {
-    const el = document.getElementById(id);
-    if (el) el.setAttribute(attr, value || "#");
+  const setHref = (id, href) => {
+    const el = byId(id);
+    if (el) el.setAttribute("href", href || "#");
   };
 
-  const safeLink = (url) => (url && url.trim().length ? url : "#");
+  const createChip = (text) => {
+    const chip = document.createElement("span");
+    chip.className = "chip";
+    chip.textContent = text;
+    return chip;
+  };
 
-  const renderList = (id, items) => {
-    const container = document.getElementById(id);
+  const renderSimpleList = (id, items) => {
+    const container = byId(id);
     if (!container) return;
     container.innerHTML = "";
     (items || []).forEach((item) => {
@@ -25,236 +32,231 @@
     });
   };
 
-  const renderChipList = (id, items) => {
-    const container = document.getElementById(id);
-    if (!container) return;
-    container.innerHTML = "";
-    (items || []).forEach((item) => {
-      const chip = document.createElement("span");
-      chip.className = "chip";
-      chip.textContent = item;
-      container.appendChild(chip);
-    });
-  };
-
-  const renderPills = (items) =>
-    (items || []).map((item) => `<span class="chip">${item}</span>`).join("");
-
-  // Meta
-  document.title = `${data.meta.name} | Portfolio`;
-  setText("logo-initials", (data.meta.name || "KP").split(" ").map((part) => part[0]).join(""));
-  setText("hero-role", data.meta.role);
+  // Meta and hero
+  document.title = `${data.meta.name} | Financial Portfolio`;
+  setText(
+    "logo-initials",
+    (data.meta.name || "KP")
+      .split(" ")
+      .filter(Boolean)
+      .map((part) => part[0])
+      .join("")
+  );
+  setText("hero-title", data.meta.title);
   setText("hero-name", data.meta.name);
-  setText("hero-tagline", data.meta.tagline);
-  setText("hero-location", `Location: ${data.meta.location}`);
-  setText("hero-availability", data.meta.availability);
+  setText("hero-value", data.meta.valueStatement);
+  setText("hero-location", data.meta.location);
+  setText("hero-program", data.meta.program);
+  setText("contact-line", data.contactLine);
   setText("footer-line", `${new Date().getFullYear()} | ${data.meta.footerNote}`);
 
-  setAttr("resume-cta", "href", safeLink(data.meta.resumeLink));
-  setAttr("email-cta", "href", `mailto:${data.meta.email}`);
-  setAttr("email-link", "href", `mailto:${data.meta.email}`);
-  setAttr("linkedin-link", "href", safeLink(data.contact.linkedin));
-  setText("contact-message", data.contact.message);
+  setHref("resume-cta", data.meta.resumeLink);
+  setHref("resume-contact-cta", data.meta.resumeLink);
+  setHref("email-cta", `mailto:${data.meta.email}`);
+  setHref("email-text-link", `mailto:${data.meta.email}`);
+  setText("email-text-link", data.meta.email);
+  setHref("linkedin-link", data.meta.linkedin);
 
-  // Branding strips
-  renderList("impression-strip", data.branding.firstImpression);
-  renderList("target-roles-list", data.branding.targetRoles);
+  renderSimpleList("target-roles", data.targetRoles);
+  renderSimpleList("analyst-framework", data.analystFramework);
 
-  // Socials
-  const socialContainer = document.getElementById("social-links");
-  if (socialContainer) {
-    socialContainer.innerHTML = "";
-    (data.socials || []).forEach((social) => {
-      const li = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = safeLink(social.url);
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.textContent = social.label;
-      li.appendChild(link);
-      socialContainer.appendChild(li);
+  // About
+  const aboutContainer = byId("about-lines");
+  if (aboutContainer) {
+    aboutContainer.innerHTML = "";
+    (data.aboutLines || []).forEach((line) => {
+      const p = document.createElement("p");
+      p.textContent = line;
+      aboutContainer.appendChild(p);
     });
   }
-
-  // Highlights
-  const highlightsGrid = document.getElementById("highlights-grid");
-  if (highlightsGrid) {
-    highlightsGrid.innerHTML = "";
-    (data.highlights || []).forEach((item) => {
-      const card = document.createElement("article");
-      card.className = "highlight-card";
-      card.innerHTML = `
-        <p class="highlight-value">${item.value}</p>
-        <p class="highlight-label">${item.label}</p>
-        <p class="highlight-detail">${item.detail}</p>
-      `;
-      highlightsGrid.appendChild(card);
-    });
-  }
-
-  // Thesis
-  setText("about-intro", data.about.intro);
-  setText("about-story", data.about.story);
-  renderList("work-style-list", data.about.workStyle);
-  renderList("differentiators-list", data.about.differentiators);
-  renderChipList("interests-row", data.about.interests);
 
   // Experience
-  const expTimeline = document.getElementById("experience-timeline");
-  if (expTimeline) {
-    expTimeline.innerHTML = "";
-    (data.experience || []).forEach((exp) => {
+  const experienceGrid = byId("experience-grid");
+  if (experienceGrid) {
+    experienceGrid.innerHTML = "";
+    (data.experience || []).forEach((item) => {
       const card = document.createElement("article");
-      card.className = "timeline-item";
+      card.className = "experience-card";
       card.innerHTML = `
-        <div class="timeline-top">
-          <p class="timeline-title">${exp.role} | ${exp.organization}</p>
-          <p class="timeline-meta">${exp.period} | ${exp.location}</p>
+        <div class="experience-header">
+          <p class="experience-role">${item.role}</p>
+          <p class="experience-company">${item.company}</p>
+          <p class="experience-period">${item.period}</p>
         </div>
-        <p class="timeline-summary">${exp.summary}</p>
-        <ul class="list">${(exp.achievements || []).map((line) => `<li>${line}</li>`).join("")}</ul>
-        <div class="chip-list">${renderPills(exp.tools)}</div>
+        <div class="metric-row">
+          <p class="metric-label">What Was Analyzed</p>
+          <p class="metric-text">${item.analyzed}</p>
+        </div>
+        <div class="metric-row">
+          <p class="metric-label">Tools Used</p>
+          <div class="chip-row"></div>
+        </div>
+        <div class="metric-row">
+          <p class="metric-label">Business Impact</p>
+          <p class="metric-text">${item.impact}</p>
+        </div>
       `;
-      expTimeline.appendChild(card);
+      const chipRow = card.querySelector(".chip-row");
+      (item.tools || []).forEach((tool) => chipRow.appendChild(createChip(tool)));
+      experienceGrid.appendChild(card);
     });
   }
 
   // Projects
-  const projectGrid = document.getElementById("projects-grid");
-  if (projectGrid) {
-    projectGrid.innerHTML = "";
+  const projectsStack = byId("projects-stack");
+  if (projectsStack) {
+    projectsStack.innerHTML = "";
     (data.projects || []).forEach((project) => {
       const card = document.createElement("article");
       card.className = "project-card";
-      const link = project.link
-        ? `<a class="project-link" href="${project.link}" target="_blank" rel="noopener">View project</a>`
-        : `<span class="project-link">Details available on request</span>`;
-      card.innerHTML = `
-        <p class="card-tag">${project.type} | ${project.period}</p>
-        <p class="project-title">${project.name}</p>
-        <p class="card-copy">${project.description}</p>
-        <p class="card-copy"><strong>Impact:</strong> ${project.impact}</p>
-        <div class="chip-list">${renderPills(project.skills)}</div>
-        ${link}
-      `;
-      projectGrid.appendChild(card);
-    });
-  }
 
-  // Case studies
-  const caseGrid = document.getElementById("case-studies-grid");
-  if (caseGrid) {
-    caseGrid.innerHTML = "";
-    (data.caseStudies || []).forEach((item) => {
-      const card = document.createElement("article");
-      card.className = "case-card";
-      const link = item.link
-        ? `<a class="case-link" href="${item.link}" target="_blank" rel="noopener">Read case study</a>`
-        : `<span class="case-link">Full write-up available on request</span>`;
-      card.innerHTML = `
-        <p class="card-tag">${item.focus}</p>
-        <p class="case-title">${item.title}</p>
-        <div>
-          <p class="case-section-label">Challenge</p>
-          <p class="card-copy">${item.challenge}</p>
-        </div>
-        <div>
-          <p class="case-section-label">Approach</p>
-          <p class="card-copy">${item.approach}</p>
-        </div>
-        <div>
-          <p class="case-section-label">Result</p>
-          <p class="card-copy">${item.result}</p>
-        </div>
-        <div class="chip-list">${renderPills(item.tools)}</div>
-        ${link}
+      const header = document.createElement("div");
+      header.className = "project-header";
+      header.innerHTML = `
+        <p class="project-name">${project.name}</p>
+        <p class="project-subtitle">${project.subtitle}</p>
       `;
-      caseGrid.appendChild(card);
-    });
-  }
+      card.appendChild(header);
 
-  // Certifications and education
-  const certList = document.getElementById("certifications-list");
-  if (certList) {
-    certList.innerHTML = "";
-    (data.certifications || []).forEach((cert) => {
-      const card = document.createElement("article");
-      card.className = "tiny-card";
-      card.innerHTML = `
-        <p class="tiny-card-title">${cert.name}</p>
-        <p class="tiny-card-meta">${cert.issuer}</p>
-        <p class="tiny-card-meta">${cert.period}</p>
-      `;
-      certList.appendChild(card);
-    });
-  }
+      const grid = document.createElement("div");
+      grid.className = "project-details-grid";
+      (project.blocks || []).forEach((block) => {
+        const blockEl = document.createElement("div");
+        blockEl.className = "project-block";
+        const heading = document.createElement("p");
+        heading.className = "project-block-title";
+        heading.textContent = block.title;
+        blockEl.appendChild(heading);
 
-  const eduList = document.getElementById("education-list");
-  if (eduList) {
-    eduList.innerHTML = "";
-    (data.education || []).forEach((edu) => {
-      const card = document.createElement("article");
-      card.className = "tiny-card";
-      card.innerHTML = `
-        <p class="tiny-card-title">${edu.title}</p>
-        <p>${edu.institution}</p>
-        <p class="tiny-card-meta">${edu.period}</p>
-        <p class="tiny-card-meta">${edu.detail}</p>
-      `;
-      eduList.appendChild(card);
+        if (block.content) {
+          const content = document.createElement("p");
+          content.className = "project-block-copy";
+          content.textContent = block.content;
+          blockEl.appendChild(content);
+        }
+
+        if (block.list && block.list.length) {
+          const list = document.createElement("ul");
+          list.className = "project-list";
+          block.list.forEach((listItem) => {
+            const li = document.createElement("li");
+            li.textContent = listItem;
+            list.appendChild(li);
+          });
+          blockEl.appendChild(list);
+        }
+
+        grid.appendChild(blockEl);
+      });
+
+      card.appendChild(grid);
+      projectsStack.appendChild(card);
     });
   }
 
   // Skills
-  const skillsGrid = document.getElementById("skills-grid");
+  const skillsGrid = byId("skills-grid");
   if (skillsGrid) {
     skillsGrid.innerHTML = "";
     (data.skills || []).forEach((group) => {
       const card = document.createElement("article");
       card.className = "skill-card";
-      const rows = (group.items || [])
-        .map(
-          (skill) => `
-            <div class="skill-row">
-              <span class="skill-name">${skill.name}</span>
-              <div class="skill-track">
-                <div class="skill-fill" style="width:${Math.max(0, Math.min(100, skill.level))}%"></div>
-              </div>
-              <span class="skill-level">${skill.level}%</span>
-            </div>`
-        )
-        .join("");
-      card.innerHTML = `<h3>${group.category}</h3>${rows}`;
+      const heading = document.createElement("p");
+      heading.className = "skill-category";
+      heading.textContent = group.category;
+      card.appendChild(heading);
+
+      const list = document.createElement("ul");
+      list.className = "skill-list";
+      (group.items || []).forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+      card.appendChild(list);
       skillsGrid.appendChild(card);
     });
   }
 
+  // Certifications
+  const certGrid = byId("certifications-grid");
+  if (certGrid) {
+    certGrid.innerHTML = "";
+    (data.certifications || []).forEach((cert) => {
+      const card = document.createElement("article");
+      card.className = "cert-card";
+      card.innerHTML = `
+        <p class="cert-name">${cert.name}</p>
+        <p class="cert-status">${cert.status}</p>
+      `;
+      if (cert.details && cert.details.length) {
+        const detailRow = document.createElement("div");
+        detailRow.className = "chip-row";
+        cert.details.forEach((item) => detailRow.appendChild(createChip(item)));
+        card.appendChild(detailRow);
+      }
+      certGrid.appendChild(card);
+    });
+  }
+
+  // Leadership
+  const leadershipGrid = byId("leadership-grid");
+  if (leadershipGrid) {
+    leadershipGrid.innerHTML = "";
+    (data.leadership || []).forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "leadership-card";
+      card.innerHTML = `
+        <p class="leadership-title">${item.title}</p>
+        <p class="leadership-detail">${item.detail}</p>
+      `;
+      leadershipGrid.appendChild(card);
+    });
+  }
+
+  // Social links
+  const socialLinks = byId("social-links");
+  if (socialLinks) {
+    socialLinks.innerHTML = "";
+    (data.socials || []).forEach((social) => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.textContent = social.label;
+      link.href = social.url || "#";
+      link.target = "_blank";
+      link.rel = "noopener";
+      li.appendChild(link);
+      socialLinks.appendChild(li);
+    });
+  }
+
   // Mobile nav
-  const nav = document.getElementById("site-nav");
-  const menuToggle = document.getElementById("menu-toggle");
-  if (nav && menuToggle) {
-    menuToggle.addEventListener("click", () => nav.classList.toggle("open"));
+  const nav = byId("site-nav");
+  const menu = byId("menu-toggle");
+  if (nav && menu) {
+    menu.addEventListener("click", () => nav.classList.toggle("open"));
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => nav.classList.remove("open"));
     });
   }
 
-  // Reveal animation
-  const revealItems = document.querySelectorAll(".reveal");
+  // Subtle reveal animation
+  const reveals = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("revealed");
+          entry.target.classList.add("is-visible");
           observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.12 }
   );
 
-  revealItems.forEach((el, index) => {
-    el.style.transitionDelay = `${Math.min(index * 45, 180)}ms`;
-    observer.observe(el);
+  reveals.forEach((item, index) => {
+    item.style.transitionDelay = `${Math.min(index * 40, 200)}ms`;
+    observer.observe(item);
   });
 })();

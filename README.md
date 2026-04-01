@@ -1,6 +1,6 @@
 # Kirtana Portfolio Website
 
-This is a fully editable premium finance-style portfolio built with plain `HTML + CSS + JavaScript`.
+This is a fully editable premium, finance-focused portfolio built with plain `HTML + CSS + JavaScript`.
 
 ## Quick start
 
@@ -10,23 +10,23 @@ This is a fully editable premium finance-style portfolio built with plain `HTML 
 
 ## Where to edit what
 
-- Hero text, email, resume path: `meta` in `data.js`
-- First-impression words + target roles: `branding` in `data.js`
-- Social links: `socials` in `data.js`
-- Investment thesis + personal story + interests: `about` in `data.js`
-- Work history: `experience` array in `data.js`
-- Projects: `projects` array in `data.js`
-- Case studies: `caseStudies` array in `data.js`
-- Certifications and education: `certifications` and `education` in `data.js`
-- Toolkit bars: `skills` array in `data.js`
+- Hero content, email, resume path: `meta` in `data.js`
+- Target roles and analyst framework: `targetRoles`, `analystFramework` in `data.js`
+- About section lines: `aboutLines` in `data.js`
+- Experience cards: `experience` array in `data.js`
+- Project deep-dive structure: `projects` array with `blocks` in `data.js`
+- Skills categories: `skills` array in `data.js`
+- Certifications list: `certifications` array in `data.js`
+- Leadership cards: `leadership` array in `data.js`
+- Contact intro + social links: `contactLine`, `socials`, and `meta.linkedin` in `data.js`
 
 ## Make it uniquely yours
 
-1. Replace placeholder metrics in `highlights` with numbers from your resume.
-2. Turn each case study into clear `Challenge -> Approach -> Result` outcomes.
-3. Add 1-2 quantified bullets per experience role for stronger credibility.
+1. Replace placeholder company names and dates in `experience`.
+2. Add final thesis decision and valuation outputs in the Pfizer project once complete.
+3. Add quantified outcomes for each experience card where possible.
 4. Update `resumeLink` to the exact file location you want to share.
-5. Tweak color variables in [styles.css](./styles.css) if you want a different navy/gold mix.
+5. Update `meta.linkedin` and `socials` with your real profile links.
 
 ## Publish options
 

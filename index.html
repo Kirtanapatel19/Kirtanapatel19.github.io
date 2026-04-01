@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirtana Patel | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Kirtana Patel - experience, projects, skills, achievements, and contact information."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-top"></div>
+    <div class="ambient ambient-bottom"></div>
+
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Back to top">
+        <span id="logo-initials">KP</span>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">Menu</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#proof">Proof</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section reveal">
+        <p id="hero-role" class="hero-role"></p>
+        <h1 id="hero-name"></h1>
+        <p id="hero-tagline" class="hero-tagline"></p>
+        <div class="hero-meta">
+          <span id="hero-location"></span>
+          <span id="hero-availability"></span>
+        </div>
+        <div class="hero-actions">
+          <a id="primary-cta" class="btn btn-primary" href="#contact">Let's Connect</a>
+          <a id="resume-cta" class="btn btn-outline" href="#" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+        <ul id="social-links" class="social-links"></ul>
+      </section>
+
+      <section class="section reveal">
+        <h2>Impact Snapshot</h2>
+        <div id="highlights-grid" class="highlights-grid"></div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <h2>About Me</h2>
+        <p id="about-intro" class="about-intro"></p>
+        <div class="two-column">
+          <div>
+            <h3>How I Work</h3>
+            <ul id="work-style-list" class="list"></ul>
+          </div>
+          <div>
+            <h3>What Makes Me Different</h3>
+            <ul id="differentiators-list" class="list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section reveal">
+        <h2>Experience</h2>
+        <div id="experience-timeline" class="timeline"></div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <h2>Featured Work</h2>
+        <div id="projects-grid" class="projects-grid"></div>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <h2>Skills Matrix</h2>
+        <div id="skills-grid" class="skills-grid"></div>
+      </section>
+
+      <section id="proof" class="section reveal">
+        <h2>Proof & Credentials</h2>
+        <div class="two-column">
+          <div>
+            <h3>Education</h3>
+            <div id="education-list" class="card-stack"></div>
+          </div>
+          <div>
+            <h3>Certifications</h3>
+            <div id="certifications-list" class="card-stack"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Testimonials</h2>
+        <div id="testimonials-grid" class="testimonials-grid"></div>
+      </section>
+
+      <section class="section reveal">
+        <h2>Now</h2>
+        <ul id="now-list" class="list now-list"></ul>
+      </section>
+
+      <section id="contact" class="section section-contact reveal">
+        <h2>Let's Build Something Useful</h2>
+        <p id="contact-message"></p>
+        <div class="contact-actions">
+          <a id="email-link" class="btn btn-primary" href="#">Email Me</a>
+          <a id="linkedin-link" class="btn btn-outline" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p id="footer-line"></p>
+    </footer>
+
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

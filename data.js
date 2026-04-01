@@ -1,169 +1,204 @@
 /*
   Portfolio Content Source of Truth
   ---------------------------------
-  Edit this file whenever you want to update your website content.
-  You can add/remove items from arrays like experience, projects, skills, etc.
+  Update this file to change your content.
+  Keep this file focused on data so you rarely need to edit HTML/CSS.
 */
 
 window.PORTFOLIO_DATA = {
   meta: {
     name: "Kirtana Patel",
-    role: "Aspiring Data & Technology Professional",
+    role: "Finance & Investment Analysis Candidate",
     tagline:
-      "I turn ideas into practical outcomes through clear communication, structured execution, and user-focused problem solving.",
+      "Analytical thinker with a strategic mindset, focused on turning financial data into clear decisions and disciplined execution.",
     location: "New Jersey, USA",
-    availability: "Open to internships and full-time opportunities",
+    availability: "Open to internships and full-time analyst roles",
     email: "kirtana.patel@email.com",
-    phone: "(+1) 000-000-0000",
     resumeLink: "./Resume - Kirtana Patel.pdf",
-    footerNote: "Designed and curated by Kirtana Patel",
+    footerNote: "Kirtana Patel | Analytical. Strategic. Driven.",
+  },
+
+  branding: {
+    firstImpression: ["Analytical", "Strategic", "Driven"],
+    targetRoles: [
+      "Financial Analyst",
+      "Trading Desk Analyst",
+      "Investment Analyst (Buy-side / Asset Management)",
+      "Portfolio Analyst",
+      "FP&A Analyst",
+    ],
   },
 
   socials: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/your-linkedin/" },
-    { label: "GitHub", url: "https://github.com/your-github" },
-    { label: "Email", url: "mailto:kirtana.patel@email.com" },
+    { label: "GitHub", url: "https://github.com/Kirtanapatel19" },
   ],
 
   highlights: [
-    { value: "3+", label: "Core Domains", detail: "Analytics, operations, client communication" },
-    { value: "10+", label: "Projects & Assignments", detail: "Academic, personal, and collaborative work" },
-    { value: "100%", label: "Ownership Mindset", detail: "End-to-end accountability from planning to delivery" },
-    { value: "24/7", label: "Learning Rhythm", detail: "Consistent upskilling and experimentation" },
+    { value: "5", label: "Target Tracks", detail: "Financial, trading desk, investment, portfolio, FP&A" },
+    { value: "3", label: "Brand Pillars", detail: "Analytical rigor, strategic perspective, high execution discipline" },
+    { value: "1", label: "Core Positioning", detail: "Data + strategy focus for decision-grade finance insights" },
+    { value: "24/7", label: "Learning Velocity", detail: "Continuous skill growth in markets, modeling, and analytics" },
   ],
 
   about: {
     intro:
-      "I enjoy building systems that are both thoughtful and useful. My focus is to combine analytical thinking with human-centered communication, so teams can move faster with confidence.",
+      "I am building my career at the intersection of finance, analytics, and strategy. My work style is structured, detail-oriented, and outcome-focused.",
+    story:
+      "My personal story is rooted in growth, discipline, and global exposure. I value consistent improvement, clear communication, and the ability to translate complex data into practical business and investment decisions.",
     workStyle: [
-      "Clarify goals first, then prioritize high-impact actions.",
-      "Break down complex tasks into transparent, trackable milestones.",
-      "Document decisions and share context early to reduce friction.",
-      "Balance quality with delivery speed using practical iteration.",
+      "Start with context: understand the business objective before modeling.",
+      "Use disciplined analysis to separate signal from noise.",
+      "Document assumptions and decisions for transparent collaboration.",
+      "Prioritize execution quality without slowing momentum.",
     ],
     differentiators: [
-      "I connect technical details with stakeholder needs in plain language.",
-      "I care about measurable outcomes, not just completed tasks.",
-      "I build reusable templates and workflows that save team time.",
-      "I approach feedback as an accelerator, not criticism.",
+      "I combine financial logic with structured storytelling.",
+      "I stay calm under ambiguity and break complex problems into action paths.",
+      "I focus on measurable outcomes and decision quality.",
+      "I bring consistent ownership from initial analysis to final recommendation.",
     ],
+    interests: ["Photography", "Painting", "Calisthenics", "Chess"],
   },
 
   experience: [
     {
-      role: "Add Your Most Recent Role Here",
-      organization: "Company / Organization",
+      role: "Add Most Recent Role",
+      organization: "Company / Team",
       period: "Month YYYY - Present",
       location: "City, State",
-      summary: "Short 1-2 sentence description of your role scope and team context.",
+      summary:
+        "Summarize your ownership scope in one sentence with context on business area, team, and objective.",
       achievements: [
-        "Achievement with numbers: improved X by Y%.",
-        "Process impact: reduced turnaround from A to B.",
-        "Collaboration impact: coordinated with N stakeholders across teams.",
+        "Built a repeatable analysis workflow that improved decision turnaround by X%.",
+        "Produced executive-ready reporting for weekly or monthly financial review.",
+        "Partnered cross-functionally with operations, leadership, or client teams.",
       ],
-      tools: ["Excel", "SQL", "Power BI", "Communication", "Documentation"],
+      tools: ["Excel", "Financial Modeling", "Variance Analysis", "Reporting"],
     },
     {
-      role: "Add Another Experience",
-      organization: "Company / Organization",
+      role: "Add Prior Role",
+      organization: "Company / Team",
       period: "Month YYYY - Month YYYY",
       location: "City, State",
-      summary: "Describe your responsibilities with a focus on outcomes and value delivered.",
+      summary:
+        "Highlight role impact and responsibilities tied to planning, analysis, or market-oriented work.",
       achievements: [
-        "Built or supported a workflow that solved a clear business problem.",
-        "Presented findings and recommendations to leadership or team members.",
+        "Analyzed trends and built recommendations for cost, revenue, or portfolio performance.",
+        "Improved reporting quality with cleaner structure and stronger auditability.",
       ],
-      tools: ["Analytics", "Research", "Reporting"],
+      tools: ["SQL", "Power BI", "Forecasting", "Dashboarding"],
     },
   ],
 
   projects: [
     {
-      name: "Portfolio Website (This Project)",
-      type: "Personal Brand Project",
+      name: "Equity Screening Framework",
+      type: "Investment Research Project",
       period: "2026",
       description:
-        "Created a dynamic, editable personal website that highlights impact, storytelling, and professional proof in one place.",
-      impact: "Built a reusable format for showcasing career growth, achievements, and project outcomes.",
-      skills: ["HTML", "CSS", "JavaScript", "Content Strategy"],
+        "Built a rule-based screening framework to evaluate public equities using valuation, profitability, and growth metrics.",
+      impact:
+        "Created a shortlist process that reduced time-to-first-pass analysis and improved comparison consistency.",
+      skills: ["Financial Statement Analysis", "Ratio Analysis", "Excel"],
       link: "",
     },
     {
-      name: "Add Your Best Project Here",
-      type: "Academic / Internship / Personal",
-      period: "YYYY",
-      description: "Describe the challenge, approach, and what made this project meaningful.",
-      impact: "Include measurable or qualitative outcomes.",
-      skills: ["Tool 1", "Tool 2", "Tool 3"],
-      link: "https://github.com/your-github/project-name",
+      name: "FP&A Driver-Based Forecast Model",
+      type: "Finance Planning Project",
+      period: "2026",
+      description:
+        "Developed a driver-based model connecting revenue assumptions, cost structure, and operating margin sensitivity.",
+      impact:
+        "Enabled scenario planning and clearer variance explanations for monthly review cycles.",
+      skills: ["Forecasting", "Scenario Analysis", "Data Storytelling"],
+      link: "",
+    },
+    {
+      name: "Portfolio Risk Snapshot Dashboard",
+      type: "Portfolio Analytics Project",
+      period: "2026",
+      description:
+        "Designed a dashboard prototype to track concentration, volatility profile, and performance attribution signals.",
+      impact:
+        "Improved visibility into risk drivers and supported faster review conversations.",
+      skills: ["Portfolio Metrics", "Dashboard Design", "Structured Reporting"],
+      link: "",
+    },
+  ],
+
+  caseStudies: [
+    {
+      title: "Case Study 01 | Investment Thesis Buildout",
+      focus: "Security Selection Process",
+      challenge:
+        "Needed a disciplined process to compare investment candidates without narrative bias.",
+      approach:
+        "Built a structured scoring model using valuation, earnings quality, and growth durability inputs.",
+      result:
+        "Produced a ranked set of candidates with transparent assumptions and clearer downside awareness.",
+      tools: ["Excel", "Research Notes", "Comparative Analysis"],
+      link: "",
+    },
+    {
+      title: "Case Study 02 | Forecast Variance Investigation",
+      focus: "FP&A Analysis",
+      challenge:
+        "Budget vs actual results showed recurring variance with unclear operational drivers.",
+      approach:
+        "Mapped key business drivers, segmented variance components, and presented root-cause insights.",
+      result:
+        "Improved forecast accuracy discipline and focused management discussion on controllable levers.",
+      tools: ["Variance Analysis", "Data Structuring", "Presentation"],
+      link: "",
+    },
+  ],
+
+  certifications: [
+    { name: "Add Certification Name", issuer: "Provider", period: "YYYY" },
+    { name: "Add Certification Name", issuer: "Provider", period: "YYYY" },
+    { name: "Add Certification Name", issuer: "Provider", period: "YYYY" },
+  ],
+
+  education: [
+    {
+      title: "Add Degree Name",
+      institution: "Rutgers University",
+      period: "Expected Graduation: YYYY",
+      detail: "Relevant coursework: Corporate Finance, Investments, Accounting, Statistics, Econometrics",
     },
   ],
 
   skills: [
     {
-      category: "Data & Analysis",
+      category: "Financial Analysis",
+      items: [
+        { name: "Financial Modeling", level: 82 },
+        { name: "Valuation Fundamentals", level: 78 },
+        { name: "Variance Analysis", level: 85 },
+      ],
+    },
+    {
+      category: "Data & Reporting",
       items: [
         { name: "Excel", level: 90 },
-        { name: "SQL", level: 75 },
-        { name: "Data Visualization", level: 80 },
+        { name: "SQL", level: 76 },
+        { name: "Power BI / Tableau", level: 73 },
       ],
     },
     {
-      category: "Business & Communication",
+      category: "Strategic Communication",
       items: [
-        { name: "Presentation", level: 85 },
-        { name: "Stakeholder Communication", level: 88 },
-        { name: "Documentation", level: 84 },
+        { name: "Executive Summary Writing", level: 86 },
+        { name: "Presentation of Insights", level: 84 },
+        { name: "Cross-Team Collaboration", level: 87 },
       ],
     },
-    {
-      category: "Tools & Workflow",
-      items: [
-        { name: "Power BI / Tableau", level: 72 },
-        { name: "Project Planning", level: 82 },
-        { name: "Process Improvement", level: 80 },
-      ],
-    },
-  ],
-
-  education: [
-    {
-      title: "Your Degree Name",
-      institution: "Rutgers University",
-      period: "Expected Graduation: YYYY",
-      detail: "Relevant coursework: add 3-5 classes aligned with your target role.",
-    },
-  ],
-
-  certifications: [
-    { name: "Add Certification", issuer: "Coursera / Google / LinkedIn", period: "YYYY" },
-    { name: "Add Certification", issuer: "AWS / Microsoft / Other", period: "YYYY" },
-  ],
-
-  testimonials: [
-    {
-      quote:
-        "Kirtana combines strong ownership with clear communication, making teamwork easier and outcomes stronger.",
-      author: "Mentor / Manager Name",
-      role: "Title, Company",
-    },
-    {
-      quote:
-        "She brings structure to ambiguity and keeps projects moving with thoughtful follow-through.",
-      author: "Professor / Team Lead Name",
-      role: "Title, Organization",
-    },
-  ],
-
-  now: [
-    "Currently deepening expertise in analytics storytelling and dashboard design.",
-    "Building a stronger public project portfolio with measurable case studies.",
-    "Targeting opportunities where data, operations, and user outcomes intersect.",
   ],
 
   contact: {
     message:
-      "I am always happy to connect about internships, full-time roles, collaborative projects, or mentorship opportunities.",
+      "I am open to Financial Analyst, Trading Desk Analyst, Investment Analyst, Portfolio Analyst, and FP&A Analyst opportunities.",
     linkedin: "https://www.linkedin.com/in/your-linkedin/",
   },
 };

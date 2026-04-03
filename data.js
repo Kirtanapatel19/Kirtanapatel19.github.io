@@ -8,8 +8,8 @@ window.PORTFOLIO_DATA = {
   meta: {
     name: "Kirtana Patel",
     title: "Financial Analyst | Valuation, Financial Modeling & AI-Driven Analysis",
-    valueStatement:
-      "Decision-focused finance projects in valuation, modeling, forecasting, and AI-supported analysis.",
+    valueStatement: "Decision-focused finance projects in valuation, modeling, forecasting, and AI-supported analysis.",
+    tagline: "Translating financial analysis into clear, interview-ready decision insights.",
     location: "New Jersey, United States",
     program: "Master of Finance in Analytics (Class of 2026) | Rutgers Business School",
     email: "kvp80@scarletmail.rutgers.edu",
@@ -22,10 +22,10 @@ window.PORTFOLIO_DATA = {
     intro:
       "My approach combines structured training at Rutgers Business School with practical finance exposure from I&M Bank.",
     principles: [
-      "Start with value drivers, not outputs: define the question, objective, and core assumptions first.",
+      "Start with value drivers, not outputs: define the question, objectives, and core assumptions first.",
       "Stress-test assumptions with downside, base, and upside scenarios before making recommendations.",
       "Prioritize decision usefulness: every model should explain what to do next, not just what happened.",
-      "Use AI as an analytical accelerator while keeping finance judgment, controls, and accountability human-led.",
+      "Use AI as an analytical accelerator while ensuring financial judgment, controls, and accountability remain human-led.",
     ],
   },
 

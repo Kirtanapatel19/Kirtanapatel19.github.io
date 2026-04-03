@@ -67,6 +67,7 @@
   setText("hero-title", data.meta.title);
   setText("hero-name", data.meta.name);
   setText("hero-value", data.meta.valueStatement);
+  setText("hero-tagline", data.meta.tagline);
   setText("hero-location", data.meta.location);
   setText("hero-program", data.meta.program);
   setText("footer-line", `${new Date().getFullYear()} | ${data.meta.footerNote}`);

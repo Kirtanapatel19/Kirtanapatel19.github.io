@@ -163,7 +163,12 @@ main {
 
 .hero-value {
   color: var(--copy-on-dark);
-  max-width: 72ch;
+  white-space: nowrap;
+}
+
+.hero-tagline {
+  color: rgba(249, 250, 251, 0.74);
+  font-size: 0.95rem;
 }
 
 .hero-meta {
@@ -245,6 +250,12 @@ main {
   background: var(--white);
   color: var(--copy-on-light);
   padding: 17px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.16);
 }
 
 .project-header {
@@ -260,6 +271,7 @@ main {
 .project-impact {
   margin-top: 10px;
   color: rgba(17, 24, 39, 0.84);
+  line-height: 1.8;
 }
 
 .project-executed {
@@ -274,6 +286,7 @@ main {
 .project-list li {
   margin-bottom: 6px;
   color: rgba(17, 24, 39, 0.8);
+  line-height: 1.75;
 }
 
 .chip-row {
@@ -305,6 +318,7 @@ main {
 
 .learned-block p {
   color: rgba(17, 24, 39, 0.86);
+  line-height: 1.75;
 }
 
 .project-deep-dive {
@@ -385,6 +399,14 @@ main {
   background: var(--white);
   padding: 14px;
   color: var(--copy-on-light);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.experience-card:hover,
+.skill-card:hover,
+.cert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.14);
 }
 
 .experience-header {
@@ -499,5 +521,9 @@ main {
   main {
     width: min(1150px, calc(100% - 16px));
     padding-top: 18px;
+  }
+
+  .hero-value {
+    white-space: normal;
   }
 }

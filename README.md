@@ -1,34 +1,37 @@
-# Kirtana Portfolio Website
+# Kirtana Patel Portfolio
 
-This is a fully editable premium, finance-focused portfolio built with plain `HTML + CSS + JavaScript`.
+Decision-oriented finance portfolio built with plain `HTML + CSS + JavaScript`.
 
-## Quick start
+## Quick Start
 
-1. Open [index.html](./index.html) in your browser.
-2. Edit content in [data.js](./data.js).
-3. Refresh your browser to see updates.
+1. Open `index.html` in a browser.
+2. Edit portfolio content in `data.js`.
+3. Refresh the browser.
 
-## Where to edit what
+## Content Map (`data.js`)
 
-- Hero content, email, resume path: `meta` in `data.js`
-- Target roles and analyst framework: `targetRoles`, `analystFramework` in `data.js`
-- About section lines: `aboutLines` in `data.js`
-- Experience cards: `experience` array in `data.js`
-- Project deep-dive structure: `projects` array with `blocks` in `data.js`
-- Skills categories: `skills` array in `data.js`
-- Certifications list: `certifications` array in `data.js`
-- Leadership cards: `leadership` array in `data.js`
-- Contact intro + social links: `contactLine`, `socials`, and `meta.linkedin` in `data.js`
+- `meta`: name, title, contact, resume path
+- `analyticalApproach`: short analytical framework section
+- `projects`: core repeatable project cards
+  - `title`
+  - `decisionImpact` (one-line purpose/outcome)
+  - `skills` (chip tags)
+  - `executed` (2-3 concise bullets)
+  - `learned` (analytical takeaway)
+  - `deepDive.outputs` / `deepDive.modelNotes` (expandable detail)
+- `experience`: contribution, skills developed, key insight
+- `skills`: grouped skill categories
+- `certifications`: certification cards
+- `projectSystem`: backend tracking workflow summary and steps
+- `socials`, `contactLine`: footer/contact data
 
-## Make it uniquely yours
+## Tracking Template
 
-1. Replace placeholder company names and dates in `experience`.
-2. Add final thesis decision and valuation outputs in the Pfizer project once complete.
-3. Add quantified outcomes for each experience card where possible.
-4. Update `resumeLink` to the exact file location you want to share.
-5. Update `meta.linkedin` and `socials` with your real profile links.
+- `project_tracker_template.csv` provides a reusable backend log format for new projects.
+- Keep each project updated with objective, assumptions, outputs, insight, and lessons learned.
 
-## Publish options
+## Notes
 
-- GitHub Pages: upload this `portfolio` folder to a GitHub repo and enable Pages.
-- Netlify/Vercel: drag-and-drop deploy the folder.
+- Replace `meta.linkedin` and `socials` with your final links.
+- Update project facts as your current reports/models are finalized.
+- Keep project bullets concise and decision-focused for interview usability.

@@ -3,84 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kirtana Patel | Financial Portfolio</title>
+    <title>Kirtana Patel | Finance Portfolio</title>
     <meta
       name="description"
-      content="Finance-focused portfolio of Kirtana Patel, Master's in Financial Analysis student at Rutgers University."
+      content="Decision-oriented finance portfolio of Kirtana Patel focused on valuation, financial modeling, and AI-driven analysis."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260403a" />
   </head>
   <body>
     <div class="bg-grid"></div>
-    <div class="bg-glow bg-glow-top"></div>
-    <div class="bg-glow bg-glow-bottom"></div>
+    <div class="bg-orb bg-orb-top"></div>
+    <div class="bg-orb bg-orb-bottom"></div>
 
     <header class="site-header">
       <a href="#top" class="brand" aria-label="Back to top">
         <span id="logo-initials" class="brand-mark">KP</span>
-        <span class="brand-text">Financial Analysis Portfolio</span>
+        <span class="brand-text">Finance Portfolio</span>
       </a>
       <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">Menu</button>
       <nav id="site-nav" class="site-nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#analytical-approach">Analytical Approach</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#certifications">Certifications</a>
-        <a href="#leadership">Leadership</a>
+        <a href="#project-system">Project System</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="panel hero reveal">
-        <div class="hero-grid">
-          <div>
-            <p id="hero-title" class="kicker"></p>
-            <h1 id="hero-name"></h1>
-            <p id="hero-value" class="hero-value"></p>
-            <ul id="target-roles" class="target-roles"></ul>
-            <div class="cta-row">
-              <a id="resume-cta" href="#" class="btn btn-gold" target="_blank" rel="noopener"
-                >Download Resume</a
-              >
-              <a id="contact-cta" href="#contact" class="btn btn-line">Contact</a>
-            </div>
-          </div>
-          <aside class="framework-card">
-            <p class="kicker">Analyst Thinking Framework</p>
-            <ol id="analyst-framework" class="framework-list"></ol>
-            <div class="hero-meta">
-              <p id="hero-location"></p>
-              <p id="hero-program"></p>
-            </div>
-          </aside>
+        <p id="hero-title" class="kicker"></p>
+        <h1 id="hero-name"></h1>
+        <p id="hero-value" class="hero-value"></p>
+
+        <div class="hero-meta">
+          <p id="hero-location"></p>
+          <p id="hero-program"></p>
+        </div>
+
+        <div class="cta-row">
+          <a id="resume-cta" href="#" class="btn btn-primary" target="_blank" rel="noopener"
+            >Download Resume</a
+          >
+          <a id="contact-cta" href="#contact" class="btn btn-secondary">Contact</a>
         </div>
       </section>
 
-      <section id="about" class="panel reveal">
-        <h2>About</h2>
-        <div id="about-lines" class="about-lines"></div>
-      </section>
-
-      <section id="experience" class="panel reveal">
-        <h2>Experience</h2>
-        <div id="experience-grid" class="experience-grid"></div>
+      <section id="analytical-approach" class="panel reveal">
+        <h2>Analytical Approach</h2>
+        <p id="approach-intro" class="section-intro"></p>
+        <ol id="approach-principles" class="framework-list"></ol>
       </section>
 
       <section id="projects" class="panel panel-projects reveal">
         <h2>Projects</h2>
         <p class="section-intro">
-          Priority work samples focused on valuation thinking, modeling discipline, and structured
-          financial decision support.
+          Structured, decision-oriented projects. Core insights are visible immediately; model depth is
+          expandable for interviews and technical review.
         </p>
         <div id="projects-stack" class="projects-stack"></div>
+      </section>
+
+      <section id="experience" class="panel reveal">
+        <h2>Experience</h2>
+        <p class="section-intro">
+          Application-focused snapshots of contribution, capabilities developed, and practical finance
+          insight.
+        </p>
+        <div id="experience-grid" class="experience-grid"></div>
       </section>
 
       <section id="skills" class="panel reveal">
@@ -93,9 +91,10 @@
         <div id="certifications-grid" class="certifications-grid"></div>
       </section>
 
-      <section id="leadership" class="panel reveal">
-        <h2>Leadership & Extracurriculars</h2>
-        <div id="leadership-grid" class="leadership-grid"></div>
+      <section id="project-system" class="panel reveal">
+        <h2>Project Operating System</h2>
+        <p id="system-summary" class="section-intro"></p>
+        <ol id="system-steps" class="framework-list"></ol>
       </section>
 
       <section id="contact" class="panel contact-panel reveal">
@@ -112,8 +111,8 @@
           </p>
         </div>
         <div class="cta-row">
-          <a id="email-cta" href="#" class="btn btn-gold">Email Contact</a>
-          <a id="resume-contact-cta" href="#" class="btn btn-line" target="_blank" rel="noopener"
+          <a id="email-cta" href="#" class="btn btn-primary">Email Contact</a>
+          <a id="resume-contact-cta" href="#" class="btn btn-secondary" target="_blank" rel="noopener"
             >Download Resume</a
           >
         </div>
@@ -125,7 +124,7 @@
       <p id="footer-line"></p>
     </footer>
 
-    <script src="./data.js?v=20260401b"></script>
-    <script src="./script.js?v=20260401b"></script>
+    <script src="./data.js?v=20260403a"></script>
+    <script src="./script.js?v=20260403a"></script>
   </body>
 </html>

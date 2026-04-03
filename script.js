@@ -14,14 +14,14 @@
     if (el) el.setAttribute("href", href || "#");
   };
 
-  const createChip = (text) => {
+  const createChip = (text, className = "chip") => {
     const chip = document.createElement("span");
-    chip.className = "chip";
+    chip.className = className;
     chip.textContent = text;
     return chip;
   };
 
-  const renderSimpleList = (id, items) => {
+  const renderList = (id, items) => {
     const container = byId(id);
     if (!container) return;
     container.innerHTML = "";
@@ -32,8 +32,30 @@
     });
   };
 
-  // Meta and hero
-  document.title = `${data.meta.name} | Financial Portfolio`;
+  const appendSectionList = (parent, headingText, items) => {
+    if (!items || !items.length) return;
+    const section = document.createElement("div");
+    section.className = "deep-dive-group";
+
+    const heading = document.createElement("p");
+    heading.className = "deep-dive-heading";
+    heading.textContent = headingText;
+    section.appendChild(heading);
+
+    const list = document.createElement("ul");
+    list.className = "deep-dive-list";
+    items.forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+    section.appendChild(list);
+
+    parent.appendChild(section);
+  };
+
+  // Meta + hero
+  document.title = `${data.meta.name} | Finance Portfolio`;
   setText(
     "logo-initials",
     (data.meta.name || "KP")
@@ -57,17 +79,72 @@
   setText("email-text-link", data.meta.email);
   setHref("linkedin-link", data.meta.linkedin);
 
-  renderSimpleList("target-roles", data.targetRoles);
-  renderSimpleList("analyst-framework", data.analystFramework);
+  // Analytical approach
+  setText("approach-intro", data.analyticalApproach?.intro);
+  renderList("approach-principles", data.analyticalApproach?.principles);
 
-  // About
-  const aboutContainer = byId("about-lines");
-  if (aboutContainer) {
-    aboutContainer.innerHTML = "";
-    (data.aboutLines || []).forEach((line) => {
-      const p = document.createElement("p");
-      p.textContent = line;
-      aboutContainer.appendChild(p);
+  // Projects
+  const projectsStack = byId("projects-stack");
+  if (projectsStack) {
+    projectsStack.innerHTML = "";
+    (data.projects || []).forEach((project) => {
+      const card = document.createElement("article");
+      card.className = "project-card";
+
+      const header = document.createElement("header");
+      header.className = "project-header";
+      header.innerHTML = `<h3 class="project-title">${project.title}</h3>`;
+      card.appendChild(header);
+
+      const impact = document.createElement("p");
+      impact.className = "project-impact";
+      impact.textContent = project.decisionImpact;
+      card.appendChild(impact);
+
+      if (project.skills && project.skills.length) {
+        const skillRow = document.createElement("div");
+        skillRow.className = "chip-row";
+        project.skills.forEach((skill) => skillRow.appendChild(createChip(skill)));
+        card.appendChild(skillRow);
+      }
+
+      if (project.executed && project.executed.length) {
+        const execWrap = document.createElement("div");
+        execWrap.className = "project-executed";
+        execWrap.innerHTML = `<p class="detail-label">What I Executed</p>`;
+        const list = document.createElement("ul");
+        list.className = "project-list";
+        project.executed.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          list.appendChild(li);
+        });
+        execWrap.appendChild(list);
+        card.appendChild(execWrap);
+      }
+
+      if (project.learned) {
+        const learned = document.createElement("div");
+        learned.className = "learned-block";
+        learned.innerHTML = `<p class="detail-label">What I Learned</p><p>${project.learned}</p>`;
+        card.appendChild(learned);
+      }
+
+      const deepDive = project.deepDive;
+      if (deepDive && (deepDive.outputs?.length || deepDive.modelNotes?.length)) {
+        const details = document.createElement("details");
+        details.className = "project-deep-dive";
+        details.innerHTML = `<summary>View Financial Outputs & Model Notes</summary>`;
+
+        const body = document.createElement("div");
+        body.className = "deep-dive-content";
+        appendSectionList(body, "Financial Outputs", deepDive.outputs);
+        appendSectionList(body, "Model Notes", deepDive.modelNotes);
+        details.appendChild(body);
+        card.appendChild(details);
+      }
+
+      projectsStack.appendChild(card);
     });
   }
 
@@ -85,73 +162,21 @@
           <p class="experience-period">${item.period}</p>
         </div>
         <div class="metric-row">
-          <p class="metric-label">What Was Analyzed</p>
-          <p class="metric-text">${item.analyzed}</p>
+          <p class="detail-label">Contribution</p>
+          <p class="metric-text">${item.contribution}</p>
         </div>
         <div class="metric-row">
-          <p class="metric-label">Tools Used</p>
+          <p class="detail-label">Skills Developed</p>
           <div class="chip-row"></div>
         </div>
         <div class="metric-row">
-          <p class="metric-label">Business Impact</p>
-          <p class="metric-text">${item.impact}</p>
+          <p class="detail-label">Operating Insight</p>
+          <p class="metric-text">${item.keyInsight}</p>
         </div>
       `;
       const chipRow = card.querySelector(".chip-row");
-      (item.tools || []).forEach((tool) => chipRow.appendChild(createChip(tool)));
+      (item.skillsDeveloped || []).forEach((skill) => chipRow.appendChild(createChip(skill)));
       experienceGrid.appendChild(card);
-    });
-  }
-
-  // Projects
-  const projectsStack = byId("projects-stack");
-  if (projectsStack) {
-    projectsStack.innerHTML = "";
-    (data.projects || []).forEach((project) => {
-      const card = document.createElement("article");
-      card.className = "project-card";
-
-      const header = document.createElement("div");
-      header.className = "project-header";
-      header.innerHTML = `
-        <p class="project-name">${project.name}</p>
-        <p class="project-subtitle">${project.subtitle}</p>
-      `;
-      card.appendChild(header);
-
-      const grid = document.createElement("div");
-      grid.className = "project-details-grid";
-      (project.blocks || []).forEach((block) => {
-        const blockEl = document.createElement("div");
-        blockEl.className = "project-block";
-        const heading = document.createElement("p");
-        heading.className = "project-block-title";
-        heading.textContent = block.title;
-        blockEl.appendChild(heading);
-
-        if (block.content) {
-          const content = document.createElement("p");
-          content.className = "project-block-copy";
-          content.textContent = block.content;
-          blockEl.appendChild(content);
-        }
-
-        if (block.list && block.list.length) {
-          const list = document.createElement("ul");
-          list.className = "project-list";
-          block.list.forEach((listItem) => {
-            const li = document.createElement("li");
-            li.textContent = listItem;
-            list.appendChild(li);
-          });
-          blockEl.appendChild(list);
-        }
-
-        grid.appendChild(blockEl);
-      });
-
-      card.appendChild(grid);
-      projectsStack.appendChild(card);
     });
   }
 
@@ -188,32 +213,16 @@
       card.className = "cert-card";
       card.innerHTML = `
         <p class="cert-name">${cert.name}</p>
+        <p class="cert-issuer">${cert.issuer || ""}</p>
         <p class="cert-status">${cert.status}</p>
       `;
-      if (cert.details && cert.details.length) {
-        const detailRow = document.createElement("div");
-        detailRow.className = "chip-row";
-        cert.details.forEach((item) => detailRow.appendChild(createChip(item)));
-        card.appendChild(detailRow);
-      }
       certGrid.appendChild(card);
     });
   }
 
-  // Leadership
-  const leadershipGrid = byId("leadership-grid");
-  if (leadershipGrid) {
-    leadershipGrid.innerHTML = "";
-    (data.leadership || []).forEach((item) => {
-      const card = document.createElement("article");
-      card.className = "leadership-card";
-      card.innerHTML = `
-        <p class="leadership-title">${item.title}</p>
-        <p class="leadership-detail">${item.detail}</p>
-      `;
-      leadershipGrid.appendChild(card);
-    });
-  }
+  // Project system
+  setText("system-summary", data.projectSystem?.summary);
+  renderList("system-steps", data.projectSystem?.steps);
 
   // Social links
   const socialLinks = byId("social-links");
@@ -241,7 +250,7 @@
     });
   }
 
-  // Subtle reveal animation
+  // Reveal animation
   const reveals = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(
     (entries) => {
@@ -252,11 +261,11 @@
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.15 }
   );
 
   reveals.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 40, 200)}ms`;
+    item.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
     observer.observe(item);
   });
 })();

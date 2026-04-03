@@ -1,0 +1,3 @@
+Project Name,Objective / Decision Question,Tools Used,Core Assumptions,Outputs Generated,Key Insight,What I Learned,Interview Talking Point,Next Update Date,Status
+Example - Equity DCF,Is the stock undervalued based on normalized cash flow?,Excel; Bloomberg; AI research assistant,WACC 8.0%; Terminal Growth 2.5%; Base revenue CAGR 3.0%,DCF valuation range; sensitivity table; comps sanity check,Valuation range is highly sensitive to terminal assumptions,Assumption discipline matters more than model complexity,How downside case changed recommendation,2026-04-30,In Progress
+, , , , , , , , ,

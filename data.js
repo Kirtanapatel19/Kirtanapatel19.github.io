@@ -9,7 +9,7 @@ window.PORTFOLIO_DATA = {
     name: "Kirtana Patel",
     title: "Financial Analyst | Valuation, Financial Modeling & AI-Driven Analysis",
     valueStatement:
-      "I build decision-ready financial analysis by linking assumptions to outcomes through valuation, scenario modeling, and AI-augmented research workflows.",
+      "Decision-focused finance projects in valuation, modeling, forecasting, and AI-supported analysis.",
     location: "New Jersey, United States",
     program: "Master of Finance in Analytics (Class of 2026) | Rutgers Business School",
     email: "kvp80@scarletmail.rutgers.edu",
@@ -114,35 +114,6 @@ window.PORTFOLIO_DATA = {
         modelNotes: [
           "Panel format helped separate temporary cyclical effects from business-model durability.",
           "Comparative normalization was essential to avoid distorted conclusions across fleet strategies.",
-        ],
-      },
-    },
-    {
-      title: "Tesla Quantitative Analysis & Strategy Backtest",
-      decisionImpact:
-        "Evaluated whether TSLA excess returns justified risk and transaction-cost realities in systematic strategies.",
-      skills: [
-        "Quantitative Analysis",
-        "Risk Metrics",
-        "Strategy Backtesting",
-        "Excel Dashboards",
-      ],
-      executed: [
-        "Benchmarked TSLA versus S&P 500 on total return, annualized return, volatility, beta, and Sharpe ratio.",
-        "Backtested moving-average strategies (30/100 and 50/200) under transaction-cost and no-cost assumptions.",
-        "Created a dashboard to compare raw performance with risk-adjusted outcomes.",
-      ],
-      learned:
-        "High-return assets can still be decision-inefficient when volatility and execution friction are ignored.",
-      deepDive: {
-        outputs: [
-          "Historical return spread favored TSLA, but with materially higher volatility and beta.",
-          "Net strategy outcomes changed meaningfully once transaction costs were introduced.",
-          "Risk-adjusted interpretation shifted depending on objective function (absolute vs consistency).",
-        ],
-        modelNotes: [
-          "Analysis separated signal quality from implementation feasibility.",
-          "Framework is reusable for screening momentum strategies across sectors.",
         ],
       },
     },
@@ -260,23 +231,4 @@ window.PORTFOLIO_DATA = {
     },
   ],
 
-  projectSystem: {
-    summary:
-      "Every portfolio project is tracked in a structured backend log so each case remains consistent, evidence-based, and interview-ready.",
-    steps: [
-      "Define objective and decision question before building analysis.",
-      "Track tools, assumptions, and model design choices in one place.",
-      "Capture outputs, interpretation, and recommendation logic.",
-      "Document what changed after sensitivity checks and why.",
-      "Record final lessons learned for future model reuse.",
-    ],
-  },
-
-  socials: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/your-linkedin/" },
-    { label: "GitHub", url: "https://github.com/Kirtanapatel19" },
-  ],
-
-  contactLine:
-    "Open to entry-level Financial Analyst, Research Analyst, and Credit Analyst opportunities where structured finance thinking and AI-enabled analysis create better decisions.",
 };

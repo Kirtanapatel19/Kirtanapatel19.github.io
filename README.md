@@ -22,8 +22,7 @@ Decision-oriented finance portfolio built with plain `HTML + CSS + JavaScript`.
 - `experience`: contribution, skills developed, key insight
 - `skills`: grouped skill categories
 - `certifications`: certification cards
-- `projectSystem`: backend tracking workflow summary and steps
-- `socials`, `contactLine`: footer/contact data
+- contact links come from `meta.resumeLink`, `meta.email`, and `meta.linkedin`
 
 ## Tracking Template
 
@@ -32,6 +31,7 @@ Decision-oriented finance portfolio built with plain `HTML + CSS + JavaScript`.
 
 ## Notes
 
-- Replace `meta.linkedin` and `socials` with your final links.
+- Replace `meta.linkedin` with your final link.
 - Update project facts as your current reports/models are finalized.
 - Keep project bullets concise and decision-focused for interview usability.
+- Keep only up to 3 top projects on the page.

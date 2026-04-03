@@ -69,12 +69,10 @@
   setText("hero-value", data.meta.valueStatement);
   setText("hero-location", data.meta.location);
   setText("hero-program", data.meta.program);
-  setText("contact-line", data.contactLine);
   setText("footer-line", `${new Date().getFullYear()} | ${data.meta.footerNote}`);
 
   setHref("resume-cta", data.meta.resumeLink);
-  setHref("resume-contact-cta", data.meta.resumeLink);
-  setHref("email-cta", `mailto:${data.meta.email}`);
+  setHref("contact-resume-link", data.meta.resumeLink);
   setHref("email-text-link", `mailto:${data.meta.email}`);
   setText("email-text-link", data.meta.email);
   setHref("linkedin-link", data.meta.linkedin);
@@ -87,7 +85,7 @@
   const projectsStack = byId("projects-stack");
   if (projectsStack) {
     projectsStack.innerHTML = "";
-    (data.projects || []).forEach((project) => {
+    (data.projects || []).slice(0, 3).forEach((project) => {
       const card = document.createElement("article");
       card.className = "project-card";
 
@@ -220,26 +218,6 @@
     });
   }
 
-  // Project system
-  setText("system-summary", data.projectSystem?.summary);
-  renderList("system-steps", data.projectSystem?.steps);
-
-  // Social links
-  const socialLinks = byId("social-links");
-  if (socialLinks) {
-    socialLinks.innerHTML = "";
-    (data.socials || []).forEach((social) => {
-      const li = document.createElement("li");
-      const link = document.createElement("a");
-      link.textContent = social.label;
-      link.href = social.url || "#";
-      link.target = "_blank";
-      link.rel = "noopener";
-      li.appendChild(link);
-      socialLinks.appendChild(li);
-    });
-  }
-
   // Mobile nav
   const nav = byId("site-nav");
   const menu = byId("menu-toggle");
@@ -249,23 +227,4 @@
       link.addEventListener("click", () => nav.classList.remove("open"));
     });
   }
-
-  // Reveal animation
-  const reveals = document.querySelectorAll(".reveal");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  reveals.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
-    observer.observe(item);
-  });
 })();

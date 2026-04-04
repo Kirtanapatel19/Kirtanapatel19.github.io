@@ -100,6 +100,16 @@
       impact.textContent = project.decisionImpact;
       card.appendChild(impact);
 
+      if (project.reportLink) {
+        const reportLink = document.createElement("a");
+        reportLink.className = "project-file-link";
+        reportLink.href = project.reportLink;
+        reportLink.target = "_blank";
+        reportLink.rel = "noopener";
+        reportLink.textContent = project.reportLabel || "View Project File";
+        card.appendChild(reportLink);
+      }
+
       if (project.skills && project.skills.length) {
         const skillRow = document.createElement("div");
         skillRow.className = "chip-row";

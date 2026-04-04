@@ -63,6 +63,8 @@ window.PORTFOLIO_DATA = {
       title: "Costco Fixed Income Credit Analysis | STRONG BUY",
       decisionImpact:
         "Issued a STRONG BUY call on Costco senior notes based on balance sheet strength and relative-value credit metrics.",
+      reportLink: "./Costco_Credit_Report_Akash_Kirtana_RP4.pdf",
+      reportLabel: "View Credit Report (PDF)",
       skills: [
         "Credit Analysis",
         "Yield & Spread Analysis",

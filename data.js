@@ -11,7 +11,7 @@ window.PORTFOLIO_DATA = {
     valueStatement: "Finance and analytics professional translating financial data, risk signals, and operating workflows into decision-ready insights.",
     tagline: "Focused on valuation, portfolio strategy, reporting automation, and capital markets analysis.",
     location: "New Jersey, United States",
-    program: "Master of Finance in Analytics (Class of 2026) | Rutgers Business School",
+    program: "Master of Financial Analysis (Class of 2026) | Rutgers Business School",
     email: "kvp80@scarletmail.rutgers.edu",
     phone: "+1 (732) 858-4979",
     linkedin: "https://www.linkedin.com/in/kirtanavagminpatel",
@@ -34,7 +34,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "Costco Fixed Income Credit Analysis | STRONG BUY",
       decisionImpact:
-        "Issued a STRONG BUY call on Costco senior notes based on balance sheet strength and relative-value credit metrics.",
+        "Conducted credit and relative value analysis of Costco's Aa3/AA senior notes and issued a STRONG BUY recommendation.",
       reportLink: "./Costco_Credit_Report_Akash_Kirtana_RP4.pdf",
       reportLabel: "View Credit Report (PDF)",
       skills: [
@@ -44,9 +44,9 @@ window.PORTFOLIO_DATA = {
         "Fixed Income Research",
       ],
       executed: [
-        "Analyzed leverage, net cash, ratings stability, and debt-servicing capacity post Q2 FY2026.",
-        "Evaluated yield-to-worst and spread behavior versus UST 10Y and high-quality corporate comparables.",
-        "Connected operating momentum (renewals, e-commerce growth) to credit resilience.",
+        "Evaluated $10.1B in net cash and 0.58x total debt/EBITDA to assess balance sheet resilience.",
+        "Compared yield-to-worst and credit spreads against the U.S. Treasury 10-year benchmark and high-grade corporate peers.",
+        "Connected Costco's operating strength and ratings stability to downside protection for fixed income investors.",
       ],
       learned:
         "In credit decisions, downside protection and balance sheet durability often matter more than upside narratives.",
@@ -63,9 +63,9 @@ window.PORTFOLIO_DATA = {
       },
     },
     {
-      title: "Airline Industry Panel Analysis | Comparative Investment Signal",
+      title: "Financial Airline Industry Panel Analysis | Comparative Investment Signal",
       decisionImpact:
-        "Compared three U.S. carriers over 12 quarters to identify relative operating quality and post-COVID recovery strength.",
+        "Evaluated 12 quarters of revenue, operating margins, and profitability across UAL, JBLU, and SKYW to identify relative operating quality.",
       skills: [
         "Financial Statement Analysis",
         "Panel Data Analysis",
@@ -73,9 +73,9 @@ window.PORTFOLIO_DATA = {
         "Investment Thesis Writing",
       ],
       executed: [
-        "Built a cross-sectional and time-series framework for UAL, JBLU, and SKYW (Q1 2022 to Q4 2024).",
-        "Tracked revenue growth, margin recovery, and net profitability across distinct business models.",
-        "Synthesized findings into an executive-style investment narrative and ranking.",
+        "Built a comparative trend analysis across United Airlines, JetBlue Airways, and SkyWest Airlines.",
+        "Analyzed revenue growth, operating margin recovery, and profitability conversion over 12 quarters.",
+        "Ranked United as the strongest operator while identifying JetBlue's structural cost pressure.",
       ],
       learned:
         "Sector-level narratives can mislead; decision quality improves when company-level execution and cost structure are isolated.",
@@ -156,26 +156,19 @@ window.PORTFOLIO_DATA = {
 
   skills: [
     {
-      category: "Financial Analysis & Modeling",
+      category: "Financial Analysis & Investing",
       items: [
         "Financial Statement Analysis",
         "DCF Modeling",
-        "3-Statement Modeling",
-        "Financial Forecasting",
+        "Financial Modeling and Forecasting",
         "Budgeting & Variance Analysis",
-        "Scenario & Sensitivity Analysis",
-        "Comparable Company Analysis and Precedent Transactions",
-      ],
-    },
-    {
-      category: "Corporate Finance & Investments",
-      items: [
-        "FP&A and Management Reporting",
-        "P&L Analysis",
-        "Expense and Cost Analysis",
+        "Comparable Company Analysis",
+        "M&A and Due Diligence",
         "Investment Research",
-        "Portfolio Analysis and Valuation",
-        "Equity Analysis, Fixed Income, and Capital Markets",
+        "Portfolio Analysis & Valuation",
+        "Equity & Fixed Income Analysis",
+        "Capital Markets",
+        "KPI & Cash Flow Analysis",
       ],
     },
     {

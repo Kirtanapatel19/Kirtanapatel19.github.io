@@ -217,9 +217,34 @@ window.PORTFOLIO_DATA = {
       status: "Completed",
     },
     {
-      name: "FMVA (Selected Modules)",
+      name: "FMVA - Financial Modeling & Valuation Analyst",
       issuer: "Corporate Finance Institute",
       status: "In Progress",
+    },
+    {
+      name: "Financial Analysis Fundamentals",
+      issuer: "Corporate Finance Institute",
+      status: "Completed - ratio, trend, leverage, and benchmarking analysis",
+    },
+    {
+      name: "Financial Modeling Guidelines",
+      issuer: "Corporate Finance Institute",
+      status: "Completed",
+    },
+    {
+      name: "Introduction to 3-Statement Modeling",
+      issuer: "Corporate Finance Institute",
+      status: "Completed - model template, case study, and completed model",
+    },
+    {
+      name: "PowerPoint & Pitchbooks",
+      issuer: "Corporate Finance Institute",
+      status: "Completed",
+    },
+    {
+      name: "Asset Management & Quantitative Finance Coursework",
+      issuer: "Corporate Finance Institute",
+      status: "Completed - Bayesian thinking, ethics, Monte Carlo, regression, statistics, Python, ML",
     },
     {
       name: "Fidelity Investments Virtual Experience",
@@ -227,9 +252,19 @@ window.PORTFOLIO_DATA = {
       status: "Completed",
     },
     {
-      name: "Derivatives Micro-Credentials (Advanced Futures/Options/Swaps)",
-      issuer: "CME Group / CFI",
+      name: "Public and Private Credit Program",
+      issuer: "Forage / PGIM Fixed Income",
       status: "Completed",
+    },
+    {
+      name: "U.S. Capital Markets Virtual Experience",
+      issuer: "Freshfields / Forage",
+      status: "Completed - due diligence and Form 10-Q comment letter work",
+    },
+    {
+      name: "Derivatives and Futures Market Micro-Credentials",
+      issuer: "CME Group",
+      status: "Completed - clearing house account definitions and T-Bill futures spreads",
     },
   ],
 

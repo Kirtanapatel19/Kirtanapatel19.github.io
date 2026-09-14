@@ -217,6 +217,11 @@ window.PORTFOLIO_DATA = {
       status: "Completed",
     },
     {
+      name: "Securities Industry Essentials (SIE) Exam",
+      issuer: "FINRA",
+      status: "Passed - May 2026",
+    },
+    {
       name: "FMVA - Financial Modeling & Valuation Analyst",
       issuer: "Corporate Finance Institute",
       status: "In Progress",

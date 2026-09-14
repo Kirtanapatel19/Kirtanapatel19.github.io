@@ -237,12 +237,12 @@ window.PORTFOLIO_DATA = {
       status: "Completed",
     },
     {
-      name: "Public and Private Credit Program",
-      issuer: "Forage / PGIM Fixed Income",
+      name: "PGIM Fixed Income - Public and Private Credit",
+      issuer: "PGIM Fixed Income / Forage",
       status: "Completed",
     },
     {
-      name: "U.S. Capital Markets Virtual Experience",
+      name: "Freshfields - U.S. Capital Markets Virtual Experience",
       issuer: "Freshfields / Forage",
       status: "Completed - due diligence and Form 10-Q comment letter work",
     },

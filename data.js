@@ -32,35 +32,6 @@ window.PORTFOLIO_DATA = {
 
   projects: [
     {
-      title: "Pfizer Equity Research | BUY Recommendation",
-      decisionImpact:
-        "Built a valuation-backed BUY thesis with a $42.00 target (~55% upside) to support investment decision-making.",
-      skills: [
-        "DCF Modeling",
-        "Comparable Company Analysis",
-        "Equity Valuation",
-        "Scenario Analysis",
-      ],
-      executed: [
-        "Developed a multi-scenario DCF model using 8.0% WACC and 2.5% terminal growth assumptions.",
-        "Benchmarked valuation outputs against peer multiples and analyst consensus ranges.",
-        "Built a risk map for pipeline uncertainty, patent cliffs, litigation, and regulatory pressure.",
-      ],
-      learned:
-        "Valuation sensitivity is driven more by assumption discipline than model complexity, especially in post-normalization revenue environments.",
-      deepDive: {
-        outputs: [
-          "Blended intrinsic value estimate around $42 per share.",
-          "Forward P/E and dividend yield analysis highlighted margin-of-safety context.",
-          "Segment-level revenue assessment across Oncology, Internal Medicine, Vaccines, and Hospital.",
-        ],
-        modelNotes: [
-          "Model audited with upside/base/downside pathways to isolate key growth and margin drivers.",
-          "Comps used as a sanity check to avoid over-reliance on a single valuation method.",
-        ],
-      },
-    },
-    {
       title: "Costco Fixed Income Credit Analysis | STRONG BUY",
       decisionImpact:
         "Issued a STRONG BUY call on Costco senior notes based on balance sheet strength and relative-value credit metrics.",

@@ -76,6 +76,8 @@
   setHref("contact-resume-link", data.meta.resumeLink);
   setHref("email-text-link", `mailto:${data.meta.email}`);
   setText("email-text-link", data.meta.email);
+  setHref("phone-text-link", `tel:${(data.meta.phone || "").replace(/[^\d+]/g, "")}`);
+  setText("phone-text-link", data.meta.phone);
   setHref("linkedin-link", data.meta.linkedin);
 
   // Analytical approach
@@ -186,6 +188,22 @@
       const chipRow = card.querySelector(".chip-row");
       (item.skillsDeveloped || []).forEach((skill) => chipRow.appendChild(createChip(skill)));
       experienceGrid.appendChild(card);
+    });
+  }
+
+  // Education
+  const educationGrid = byId("education-grid");
+  if (educationGrid) {
+    educationGrid.innerHTML = "";
+    (data.education || []).forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "education-card";
+      card.innerHTML = `
+        <p class="education-degree">${item.degree}</p>
+        <p class="education-school">${item.school}</p>
+        <p class="education-period">${item.period}</p>
+      `;
+      educationGrid.appendChild(card);
     });
   }
 

@@ -398,6 +398,7 @@ main {
 }
 
 .experience-grid,
+.education-grid,
 .skills-grid,
 .certifications-grid {
   display: grid;
@@ -406,6 +407,7 @@ main {
 }
 
 .experience-card,
+.education-card,
 .skill-card,
 .cert-card {
   border-radius: var(--radius-md);
@@ -417,6 +419,7 @@ main {
 }
 
 .experience-card:hover,
+.education-card:hover,
 .skill-card:hover,
 .cert-card:hover {
   transform: translateY(-2px);
@@ -430,6 +433,7 @@ main {
 }
 
 .experience-role,
+.education-degree,
 .skill-category,
 .cert-name {
   color: var(--charcoal);
@@ -437,12 +441,14 @@ main {
 }
 
 .experience-company,
+.education-school,
 .cert-issuer {
   margin-top: 4px;
   color: rgba(17, 24, 39, 0.72);
 }
 
 .experience-period,
+.education-period,
 .cert-status {
   margin-top: 4px;
   color: #7f6216;

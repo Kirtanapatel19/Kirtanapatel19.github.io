@@ -7,25 +7,26 @@
 window.PORTFOLIO_DATA = {
   meta: {
     name: "Kirtana Patel",
-    title: "Financial Analyst | Valuation, Financial Modeling & AI-Driven Analysis",
-    valueStatement: "Decision-focused finance projects in valuation, modeling, forecasting, and AI-supported analysis.",
-    tagline: "Translating financial analysis into clear, interview-ready decision insights.",
+    title: "Business Analyst | Financial Modeling, Treasury Analytics & Investment Research",
+    valueStatement: "Finance and analytics professional translating financial data, risk signals, and operating workflows into decision-ready insights.",
+    tagline: "Focused on valuation, portfolio strategy, reporting automation, and capital markets analysis.",
     location: "New Jersey, United States",
     program: "Master of Finance in Analytics (Class of 2026) | Rutgers Business School",
     email: "kvp80@scarletmail.rutgers.edu",
-    linkedin: "https://www.linkedin.com/in/your-linkedin/",
+    phone: "+1 (732) 858-4979",
+    linkedin: "https://www.linkedin.com/in/kirtanavagminpatel",
     resumeLink: "./Resume - Kirtana Patel.pdf",
     footerNote: "Kirtana Patel | Financial Analyst Portfolio",
   },
 
   analyticalApproach: {
     intro:
-      "My approach combines structured training at Rutgers Business School with practical finance exposure from I&M Bank.",
+      "My approach combines Rutgers Business School training with hands-on financial services experience across Citizens Financial Group, Pesapal, and I&M Bank.",
     principles: [
       "Start with value drivers, not outputs: define the question, objectives, and core assumptions first.",
-      "Stress-test assumptions with downside, base, and upside scenarios before making recommendations.",
-      "Prioritize decision usefulness: every model should explain what to do next, not just what happened.",
-      "Use AI as an analytical accelerator while ensuring financial judgment, controls, and accountability remain human-led.",
+      "Use scenario, sensitivity, and stress-test analysis to understand downside exposure before recommendations are made.",
+      "Connect financial results to operating workflows so reporting explains both what changed and why it changed.",
+      "Prioritize decision usefulness: dashboards, models, and reports should clarify what action to take next.",
     ],
   },
 
@@ -123,84 +124,108 @@ window.PORTFOLIO_DATA = {
 
   experience: [
     {
-      role: "Finance & Treasury Intern",
-      company: "I&M Bank Headquarters",
-      period: "2023 - 2024",
+      role: "Business Analyst",
+      company: "Citizens Financial Group | New Jersey",
+      period: "Jan 2026 - Present",
       contribution:
-        "Supported treasury and finance workflows through statement analysis, reporting support, and documentation discipline across commercial banking operations.",
+        "Built multi-scenario Excel models, Power BI dashboards, and SQL-based reconciliation workflows supporting financial performance, risk, cost-of-capital tracking, P&L reporting, and Treasury liquidity platform delivery.",
       skillsDeveloped: [
-        "Financial Reporting",
-        "Credit Risk Awareness",
-        "Treasury Exposure",
-        "Stakeholder Coordination",
+        "Financial Modeling",
+        "Power BI Reporting",
+        "Snowflake SQL",
+        "Treasury Liquidity Reporting",
       ],
       keyInsight:
-        "In practice, finance quality depends on process reliability: accurate controls and documentation drive better decisions upstream.",
+        "Clear financial insight depends on disciplined data validation, operating process visibility, and stress-tested assumptions across front-office, Treasury, and risk stakeholders.",
     },
     {
-      role: "MFinA Analyst (Academic Projects)",
-      company: "Rutgers Business School",
-      period: "2025 - Present",
+      role: "Operations Analyst",
+      company: "Pesapal | Kenya",
+      period: "June 2024 - Mar 2025",
       contribution:
-        "Produced institutional-style analyses spanning equity research, fixed income credit, derivatives pricing, macro commentary, and portfolio analytics.",
+        "Documented Treasury Management System requirements, analyzed settlement failures and reconciliation breaks, mapped current and future-state workflows, and created Tableau dashboards for SLA adherence, trade error rates, and cost-per-transaction metrics.",
       skillsDeveloped: [
-        "Valuation",
-        "Scenario Modeling",
-        "Credit Analysis",
-        "Macroeconomic Interpretation",
+        "Business Requirements",
+        "Root-Cause Analysis",
+        "Tableau Dashboards",
+        "Process Improvement",
       ],
       keyInsight:
-        "Technical depth matters most when outputs are translated into concise recommendation logic for real decisions.",
+        "Operational finance decisions improve when process maps, stakeholder requirements, and exception analysis are tied directly to measurable control and efficiency outcomes.",
     },
     {
-      role: "Investment Simulation Analyst",
-      company: "Fidelity Investments Virtual Experience (Forage)",
-      period: "2025",
+      role: "Finance Associate Intern Analyst",
+      company: "I&M Bank | Kenya",
+      period: "Oct 2023 - May 2024",
       contribution:
-        "Completed a five-task analyst simulation covering portfolio risk review, strategic equity assessment, fixed income fundamentals, and allocation design.",
+        "Analyzed financial data, prepared management reports, supported budgeting and expense reconciliation, reviewed daily financial documents, and gained exposure to treasury and money market operations.",
       skillsDeveloped: [
-        "Portfolio Risk Analysis",
-        "Tracking Error Review",
-        "Relative Valuation",
-        "Portfolio Construction",
+        "Budgeting",
+        "Expense Reconciliation",
+        "Management Reporting",
+        "Treasury Operations",
       ],
       keyInsight:
-        "Portfolio adjustments are most credible when grounded in benchmark-relative risk diagnostics, not isolated return views.",
+        "Reliable finance work begins with accurate records, strong documentation, compliance awareness, and timely reporting support.",
+    },
+  ],
+
+  education: [
+    {
+      degree: "Master of Financial Analysis",
+      school: "Rutgers University - New Brunswick, NJ",
+      period: "Aug 2025 - May 2026",
+    },
+    {
+      degree: "Bachelor of Science in International Business Administration (IBA)",
+      school: "USIU Africa - Nairobi, Kenya",
+      period: "Jan 2020 - Dec 2023",
     },
   ],
 
   skills: [
     {
-      category: "Technical Finance",
+      category: "Financial Analysis & Modeling",
       items: [
+        "Financial Statement Analysis",
         "DCF Modeling",
         "3-Statement Modeling",
-        "Comparable Company Analysis",
-        "Fixed Income Credit Analysis",
-        "Derivatives Pricing (FRA, IR Swaps, Equity Index Swaps)",
-        "Sensitivity & Scenario Analysis",
+        "Financial Forecasting",
+        "Budgeting & Variance Analysis",
+        "Scenario & Sensitivity Analysis",
+        "Comparable Company Analysis and Precedent Transactions",
       ],
     },
     {
-      category: "Analytical Decision Skills",
+      category: "Corporate Finance & Investments",
       items: [
-        "Investment Thesis Development",
-        "Risk Assessment Under Uncertainty",
-        "Portfolio Performance Evaluation",
-        "VaR / CVaR and Quantitative Diagnostics",
-        "Macroeconomic Interpretation (GDP, CPI, Labor Markets)",
-        "Executive-Style Financial Communication",
+        "FP&A and Management Reporting",
+        "P&L Analysis",
+        "Expense and Cost Analysis",
+        "Investment Research",
+        "Portfolio Analysis and Valuation",
+        "Equity Analysis, Fixed Income, and Capital Markets",
       ],
     },
     {
-      category: "Tools & Platforms",
+      category: "Data, Analytics & Reporting Tools",
       items: [
-        "Excel (Advanced: Dynamic Arrays, Data Tables, Regression ToolPak)",
-        "Bloomberg Market Concepts (BMC)",
+        "Advanced Excel, PivotTables, Power Query, Power Pivot, VBA",
+        "SQL and Snowflake",
+        "Power BI and DAX",
         "Tableau",
-        "PowerPoint & Word for Analyst Reporting",
-        "Forage Investment Management Simulation",
-        "AI Tools for Finance Workflows (Prompting, Synthesis, Validation)",
+        "Data Reconciliation, Validation, and Visualization",
+        "PowerPoint and Word for analyst reporting",
+      ],
+    },
+    {
+      category: "Domain Knowledge",
+      items: [
+        "Financial Services and Capital Markets",
+        "Treasury and Liquidity Risk",
+        "Trade Lifecycle and Portfolio Valuation",
+        "Basel III, CCAR, and DFAST",
+        "AML, KYC, GAAP, and IFRS",
       ],
     },
   ],

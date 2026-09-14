@@ -224,27 +224,7 @@ window.PORTFOLIO_DATA = {
     {
       name: "FMVA - Financial Modeling & Valuation Analyst",
       issuer: "Corporate Finance Institute",
-      status: "In Progress",
-    },
-    {
-      name: "Financial Analysis Fundamentals",
-      issuer: "Corporate Finance Institute",
-      status: "Completed - ratio, trend, leverage, and benchmarking analysis",
-    },
-    {
-      name: "Financial Modeling Guidelines",
-      issuer: "Corporate Finance Institute",
-      status: "Completed",
-    },
-    {
-      name: "Introduction to 3-Statement Modeling",
-      issuer: "Corporate Finance Institute",
-      status: "Completed - model template, case study, and completed model",
-    },
-    {
-      name: "PowerPoint & Pitchbooks",
-      issuer: "Corporate Finance Institute",
-      status: "Completed",
+      status: "In Progress - selected FMVA modules completed",
     },
     {
       name: "Asset Management & Quantitative Finance Coursework",

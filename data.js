@@ -196,49 +196,29 @@ window.PORTFOLIO_DATA = {
 
   certifications: [
     {
-      name: "AI for Finance Specialization",
-      issuer: "Professional Certification",
-      status: "Completed",
+      name: "Financial Modeling & Valuation Analyst (FMVA®)",
+      issuer: "Corporate Finance Institute (CFI)",
+      status: "Completed - Sep 2026",
     },
     {
-      name: "Bloomberg Market Concepts (BMC)",
-      issuer: "Bloomberg",
-      status: "Completed",
-    },
-    {
-      name: "Securities Industry Essentials (SIE) Exam",
+      name: "Securities Industry Essentials (SIE)",
       issuer: "FINRA",
       status: "Passed - May 2026",
     },
     {
-      name: "FMVA - Financial Modeling & Valuation Analyst",
-      issuer: "Corporate Finance Institute",
-      status: "Completed - Sep 2026",
+      name: "Bloomberg Market Concepts",
+      issuer: "Bloomberg",
+      status: "Completed",
     },
     {
-      name: "Asset Management & Quantitative Finance Coursework",
+      name: "AI for Finance Specialization",
       issuer: "Corporate Finance Institute",
-      status: "Completed - Bayesian thinking, ethics, Monte Carlo, regression, statistics, Python, ML",
+      status: "Completed",
     },
     {
-      name: "Fidelity Investments Virtual Experience",
+      name: "Forage Job Simulations",
       issuer: "Forage",
-      status: "Completed",
-    },
-    {
-      name: "PGIM Fixed Income - Public and Private Credit",
-      issuer: "PGIM Fixed Income / Forage",
-      status: "Completed",
-    },
-    {
-      name: "Freshfields - U.S. Capital Markets Virtual Experience",
-      issuer: "Freshfields / Forage",
-      status: "Completed - due diligence and Form 10-Q comment letter work",
-    },
-    {
-      name: "Derivatives and Futures Market Micro-Credentials",
-      issuer: "CME Group",
-      status: "Completed - clearing house account definitions and T-Bill futures spreads",
+      status: "Completed - Freshfields: U.S. Capital Markets; Fidelity International: Investment Management",
     },
   ],
 

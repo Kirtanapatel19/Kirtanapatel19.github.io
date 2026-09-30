@@ -213,7 +213,7 @@ window.PORTFOLIO_DATA = {
     {
       name: "FMVA - Financial Modeling & Valuation Analyst",
       issuer: "Corporate Finance Institute",
-      status: "In Progress - selected FMVA modules completed",
+      status: "Completed - Sep 2026",
     },
     {
       name: "Asset Management & Quantitative Finance Coursework",

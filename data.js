@@ -208,12 +208,12 @@ window.PORTFOLIO_DATA = {
     {
       name: "Bloomberg Market Concepts",
       issuer: "Bloomberg",
-      status: "Completed",
+      status: "Completed - Oct 2025",
     },
     {
       name: "AI for Finance Specialization",
       issuer: "Corporate Finance Institute",
-      status: "Completed",
+      status: "Completed - Feb 2026",
     },
     {
       name: "Forage Job Simulations",

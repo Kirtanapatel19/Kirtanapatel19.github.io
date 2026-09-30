@@ -15,7 +15,7 @@ window.PORTFOLIO_DATA = {
     email: "kvp80@scarletmail.rutgers.edu",
     phone: "+1 (732) 858-4979",
     linkedin: "https://www.linkedin.com/in/kirtanavagminpatel",
-    resumeLink: "./Kirtana_Patel_Final_Resume_2026.pdf",
+    resumeLink: "./Kirtana_Patel_Resume.pdf",
     footerNote: "Kirtana Patel | Financial Analyst Portfolio",
   },
 

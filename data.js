@@ -189,8 +189,8 @@ window.PORTFOLIO_DATA = {
       items: [
         "Financial Services and Capital Markets",
         "Treasury and Liquidity Risk",
-        "Trade Lifecycle and Portfolio Valuation",
-        "Basel III, CCAR, and DFAST",
+        "Portfolio Valuation",
+        "CCAR and DFAST",
         "AML, KYC, GAAP, and IFRS",
       ],
     },

@@ -32,25 +32,19 @@
     });
   };
 
-  const appendSectionList = (parent, headingText, items) => {
-    if (!items || !items.length) return;
-    const section = document.createElement("div");
-    section.className = "deep-dive-group";
+  const appendProjectBrief = (parent, label, text) => {
+    if (!text) return;
+    const section = document.createElement("section");
+    section.className = "project-brief";
 
     const heading = document.createElement("p");
-    heading.className = "deep-dive-heading";
-    heading.textContent = headingText;
-    section.appendChild(heading);
+    heading.className = "detail-label";
+    heading.textContent = label;
 
-    const list = document.createElement("ul");
-    list.className = "deep-dive-list";
-    items.forEach((item) => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      list.appendChild(li);
-    });
-    section.appendChild(list);
+    const copy = document.createElement("p");
+    copy.textContent = text;
 
+    section.append(heading, copy);
     parent.appendChild(section);
   };
 
@@ -99,10 +93,29 @@
       }`;
       card.appendChild(header);
 
-      const impact = document.createElement("p");
-      impact.className = "project-impact";
-      impact.textContent = project.decisionImpact;
-      card.appendChild(impact);
+      if (project.coAuthor) {
+        const coAuthor = document.createElement("p");
+        coAuthor.className = "project-coauthor";
+        coAuthor.textContent = project.coAuthor;
+        card.appendChild(coAuthor);
+      }
+
+      const result = document.createElement("section");
+      result.className = "project-result";
+      appendProjectBrief(result, "Result", project.result);
+      card.appendChild(result);
+
+      if (project.keyNumbers?.length) {
+        const metrics = document.createElement("div");
+        metrics.className = "project-metrics";
+        project.keyNumbers.forEach((metric) => {
+          const item = document.createElement("div");
+          item.className = "project-metric";
+          item.innerHTML = `<strong>${metric.value}</strong><span>${metric.label}</span>`;
+          metrics.appendChild(item);
+        });
+        card.appendChild(metrics);
+      }
 
       if (project.reportLink) {
         const reportLink = document.createElement("a");
@@ -121,41 +134,12 @@
         card.appendChild(skillRow);
       }
 
-      if (project.executed && project.executed.length) {
-        const execWrap = document.createElement("div");
-        execWrap.className = "project-executed";
-        execWrap.innerHTML = `<p class="detail-label">What I Executed</p>`;
-        const list = document.createElement("ul");
-        list.className = "project-list";
-        project.executed.forEach((item) => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          list.appendChild(li);
-        });
-        execWrap.appendChild(list);
-        card.appendChild(execWrap);
-      }
-
-      if (project.learned) {
-        const learned = document.createElement("div");
-        learned.className = "learned-block";
-        learned.innerHTML = `<p class="detail-label">What I Learned</p><p>${project.learned}</p>`;
-        card.appendChild(learned);
-      }
-
-      const deepDive = project.deepDive;
-      if (deepDive && (deepDive.outputs?.length || deepDive.modelNotes?.length)) {
-        const details = document.createElement("details");
-        details.className = "project-deep-dive";
-        details.innerHTML = `<summary>View Financial Outputs & Model Notes</summary>`;
-
-        const body = document.createElement("div");
-        body.className = "deep-dive-content";
-        appendSectionList(body, "Financial Outputs", deepDive.outputs);
-        appendSectionList(body, "Model Notes", deepDive.modelNotes);
-        details.appendChild(body);
-        card.appendChild(details);
-      }
+      const story = document.createElement("div");
+      story.className = "project-story";
+      appendProjectBrief(story, "Problem", project.problem);
+      appendProjectBrief(story, "Method", project.method);
+      appendProjectBrief(story, "What I Would Change", project.wouldChange);
+      card.appendChild(story);
 
       projectsStack.appendChild(card);
     });
@@ -262,9 +246,7 @@
   // Keep motion restrained: sections reveal only as they enter the reading flow.
   if ("IntersectionObserver" in window) {
     document.documentElement.classList.add("js");
-    const revealItems = document.querySelectorAll(
-      ".panel, .project-card, .experience-card, .education-card, .skill-card, .cert-card"
-    );
+    const revealItems = document.querySelectorAll(".panel");
     const observer = new IntersectionObserver(
       (entries, activeObserver) => {
         entries.forEach((entry) => {

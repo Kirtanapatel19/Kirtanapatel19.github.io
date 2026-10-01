@@ -9,7 +9,7 @@ window.PORTFOLIO_DATA = {
     name: "Kirtana Patel",
     title: "Financial Analysis | FP&A | Investment Research",
     valueStatement: "Finance and analytics professional translating financial data, risk signals, and operating workflows into decision-ready insights.",
-    tagline: "Focused on valuation, portfolio strategy, reporting automation, and capital markets analysis.",
+    tagline: "Focused on portfolio strategy, reporting automation, and capital markets analysis.",
     location: "New Jersey, United States",
     program: "Master of Financial Analysis (Class of 2026) | Rutgers Business School",
     email: "kvp80@scarletmail.rutgers.edu",
@@ -34,64 +34,51 @@ window.PORTFOLIO_DATA = {
     {
       title: "Costco Fixed Income Credit Analysis",
       verdict: "Strong Buy",
-      decisionImpact:
-        "Conducted credit and relative value analysis of Costco's Aa3/AA senior notes and issued a STRONG BUY recommendation.",
+      coAuthor: "Co-authored with Akash",
       reportLink: "./Costco_Credit_Report_Akash_Kirtana_RP4.pdf",
       reportLabel: "View Credit Report (PDF)",
+      result:
+        "Issued a Strong Buy recommendation on Costco senior notes, supported by durable cash generation, a net cash balance sheet, and high-grade credit quality.",
+      keyNumbers: [
+        { value: "$10.1B", label: "Net cash" },
+        { value: "0.58x", label: "Total debt / EBITDA" },
+        { value: "Aa3 / AA", label: "Credit ratings" },
+      ],
+      problem:
+        "Determine whether Costco's long-duration senior notes offered compelling risk-adjusted value relative to U.S. Treasuries and comparable investment-grade corporate bonds.",
+      method:
+        "Assessed leverage, liquidity, ratings stability, yield-to-worst, and credit spreads; then paired relative-value analysis with operating and refinancing-risk review.",
+      wouldChange:
+        "Add a broader peer set and run interest-rate and spread-shock scenarios to quantify sensitivity across a wider range of market conditions.",
       skills: [
         "Credit Analysis",
         "Yield & Spread Analysis",
         "Bond Valuation",
         "Fixed Income Research",
       ],
-      executed: [
-        "Evaluated $10.1B in net cash and 0.58x total debt/EBITDA to assess balance sheet resilience.",
-        "Compared yield-to-worst and credit spreads against the U.S. Treasury 10-year benchmark and high-grade corporate peers.",
-        "Connected Costco's operating strength and ratings stability to downside protection for fixed income investors.",
-      ],
-      learned:
-        "In credit decisions, downside protection and balance sheet durability often matter more than upside narratives.",
-      deepDive: {
-        outputs: [
-          "Credit ratings confirmed Aa3/AA/AA with stable outlooks.",
-          "Net cash position of $10.1B and TD/EBITDA near 0.58x supported high-quality credit profile.",
-          "Relative-value checks versus alternative long-duration instruments improved recommendation confidence.",
-        ],
-        modelNotes: [
-          "Framework weighted cash-flow stability and refinancing risk over headline growth.",
-          "Spread analysis paired with business fundamentals to avoid purely market-technical conclusions.",
-        ],
-      },
     },
     {
       title: "Financial Airline Industry Panel Analysis",
       verdict: "Comparative Investment Signal",
-      decisionImpact:
-        "Evaluated 12 quarters of revenue, operating margins, and profitability across UAL, JBLU, and SKYW to identify relative operating quality.",
+      result:
+        "United Airlines emerged as the strongest operator in the sample, while JetBlue showed more persistent cost pressure and weaker profitability conversion.",
+      keyNumbers: [
+        { value: "12", label: "Quarters analyzed" },
+        { value: "3", label: "Airlines compared" },
+        { value: "UAL", label: "Strongest operator" },
+      ],
+      problem:
+        "Identify which airline showed the most resilient operating performance after COVID while separating cyclical recovery from structural cost and execution differences.",
+      method:
+        "Compared revenue, operating-margin, and profitability trends across United Airlines, JetBlue Airways, and SkyWest Airlines over 12 quarterly periods.",
+      wouldChange:
+        "Add capacity, load-factor, fuel-cost, and balance-sheet variables to distinguish route-network effects from broader demand and cost-cycle movements.",
       skills: [
         "Financial Statement Analysis",
         "Panel Data Analysis",
         "Ratio Analysis",
         "Investment Thesis Writing",
       ],
-      executed: [
-        "Built a comparative trend analysis across United Airlines, JetBlue Airways, and SkyWest Airlines.",
-        "Analyzed revenue growth, operating margin recovery, and profitability conversion over 12 quarters.",
-        "Ranked United as the strongest operator while identifying JetBlue's structural cost pressure.",
-      ],
-      learned:
-        "Sector-level narratives can mislead; decision quality improves when company-level execution and cost structure are isolated.",
-      deepDive: {
-        outputs: [
-          "United Airlines surfaced as the strongest post-COVID operator in the sample period.",
-          "SkyWest showed notable operational recovery from weak baseline conditions.",
-          "JetBlue highlighted structural cost pressure and weaker profitability conversion.",
-        ],
-        modelNotes: [
-          "Panel format helped separate temporary cyclical effects from business-model durability.",
-          "Comparative normalization was essential to avoid distorted conclusions across fleet strategies.",
-        ],
-      },
     },
   ],
 

@@ -7,9 +7,9 @@
 window.PORTFOLIO_DATA = {
   meta: {
     name: "Kirtana Patel",
-    title: "",
+    title: "Investment Research | Asset Management | Financial Analysis",
     valueStatement: "Curious about businesses, markets, and the decisions behind the numbers.",
-    tagline: "Finance | Investment Research | Financial Analysis.",
+    tagline: "",
     location: "New Jersey, United States",
     program: "Master of Financial Analysis (Class of 2026) | Rutgers Business School",
     email: "kvp80@scarletmail.rutgers.edu",
@@ -21,24 +21,20 @@ window.PORTFOLIO_DATA = {
 
   analyticalApproach: {
     intro:
-      "My approach combines Rutgers Business School training with hands-on financial services experience across Citizens Financial Group, Pesapal, and I&M Bank.",
-    principles: [
-      "Start with value drivers, not outputs: define the question, objectives, and core assumptions first.",
-      "Use scenario, sensitivity, and stress-test analysis to understand downside exposure before recommendations are made.",
-      "Connect financial results to operating workflows so reporting explains both what changed and why it changed.",
-      "Prioritize decision usefulness: dashboards, models, and reports should clarify what action to take next.",
-    ],
+      "I approach finance with curiosity, discipline, and a willingness to learn by doing. I enjoy asking questions, working through unfamiliar problems, and using financial analysis to understand what drives a business.",
   },
 
   projects: [
     {
-      title: "Costco Fixed Income Credit Analysis",
+      title: "Costco Senior Notes Credit Analysis",
       verdict: "Strong Buy",
       coAuthor: "Co-authored with Akash",
       reportLink: "./Costco_Credit_Report_Akash_Kirtana_RP4.pdf",
       reportLabel: "View Credit Report (PDF)",
       result:
-        "Issued a Strong Buy recommendation on Costco senior notes, supported by durable cash generation, a net cash balance sheet, and high-grade credit quality.",
+        "Evaluated Costco's financial strength, leverage, cash generation, and ability to meet its debt obligations through a credit analysis of its senior notes.",
+      keyTakeaway:
+        "Credit analysis taught me to look beyond growth and profitability and understand the financial resilience supporting a business.",
       keyNumbers: [
         { value: "$10.1B", label: "Net cash" },
         { value: "0.58x", label: "Total debt / EBITDA" },
@@ -58,10 +54,12 @@ window.PORTFOLIO_DATA = {
       ],
     },
     {
-      title: "Financial Airline Industry Panel Analysis",
+      title: "U.S. Airline Operating Analysis",
       verdict: "Comparative Investment Signal",
       result:
-        "United Airlines emerged as the strongest operator in the sample, while JetBlue showed more persistent cost pressure and weaker profitability conversion.",
+        "Compared 12 quarters of revenue, operating margins, and profitability across three U.S. airlines to evaluate relative operating quality and identify differences in business performance.",
+      keyTakeaway:
+        "Looking at trends across companies provides more insight than analyzing a single set of financial statements in isolation.",
       keyNumbers: [
         { value: "12", label: "Quarters analyzed" },
         { value: "3", label: "Airlines compared" },
@@ -133,7 +131,7 @@ window.PORTFOLIO_DATA = {
   education: [
     {
       degree: "Master of Financial Analysis",
-      school: "Rutgers University - New Brunswick, NJ",
+      school: "Rutgers Business School | Rutgers University - New Brunswick, NJ",
       period: "Aug 2025 - May 2026",
     },
     {
@@ -145,54 +143,28 @@ window.PORTFOLIO_DATA = {
 
   skills: [
     {
-      category: "Financial Analysis & Investing",
+      category: "Core Toolkit",
       items: [
-        "Financial Statement Analysis",
-        "DCF Modeling",
-        "Financial Modeling and Forecasting",
-        "Budgeting & Variance Analysis",
-        "Comparable Company Analysis",
-        "M&A and Due Diligence",
-        "Investment Research",
-        "Portfolio Analysis & Valuation",
-        "Equity & Fixed Income Analysis",
-        "Capital Markets",
-        "KPI & Cash Flow Analysis",
-      ],
-    },
-    {
-      category: "Data, Analytics & Reporting Tools",
-      items: [
-        "Advanced Excel, PivotTables, Power Query, Power Pivot, VBA",
-        "SQL and Snowflake",
-        "Power BI and DAX",
+        "Excel",
+        "Financial Modeling",
+        "SQL",
+        "Power BI",
         "Tableau",
-        "Data Reconciliation, Validation, and Visualization",
-        "PowerPoint and Word for analyst reporting",
-      ],
-    },
-    {
-      category: "Domain Knowledge",
-      items: [
-        "Financial Services and Capital Markets",
-        "Treasury and Liquidity Risk",
-        "Portfolio Valuation",
-        "CCAR and DFAST",
-        "AML, KYC, GAAP, and IFRS",
+        "Bloomberg",
       ],
     },
   ],
 
   certifications: [
     {
-      name: "Financial Modeling & Valuation Analyst (FMVA®)",
-      issuer: "Corporate Finance Institute (CFI)",
-      status: "Completed - Sep 2026",
-    },
-    {
       name: "Securities Industry Essentials (SIE)",
       issuer: "FINRA",
       status: "Passed - May 2026",
+    },
+    {
+      name: "Financial Modeling & Valuation Analyst (FMVA)",
+      issuer: "Corporate Finance Institute (CFI)",
+      status: "Completed - Sep 2026",
     },
     {
       name: "Bloomberg Market Concepts",

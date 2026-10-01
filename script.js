@@ -103,6 +103,7 @@
       const result = document.createElement("section");
       result.className = "project-result";
       appendProjectBrief(result, "Result", project.result);
+      appendProjectBrief(result, "Key Takeaway", project.keyTakeaway);
       card.appendChild(result);
 
       if (project.keyNumbers?.length) {

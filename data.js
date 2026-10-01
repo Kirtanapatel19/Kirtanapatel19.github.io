@@ -8,7 +8,7 @@ window.PORTFOLIO_DATA = {
   meta: {
     name: "Kirtana Patel",
     title: "",
-    valueStatement: "Building a career in finance with a curiosity to learn, analyze, and grow.",
+    valueStatement: "Curious about businesses, markets, and the decisions behind the numbers.",
     tagline: "Finance | Investment Research | Financial Analysis.",
     location: "New Jersey, United States",
     program: "Master of Financial Analysis (Class of 2026) | Rutgers Business School",

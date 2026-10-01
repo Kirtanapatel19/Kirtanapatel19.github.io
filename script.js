@@ -256,4 +256,26 @@
       link.addEventListener("click", () => nav.classList.remove("open"));
     });
   }
+
+  // Keep motion restrained: sections reveal only as they enter the reading flow.
+  if ("IntersectionObserver" in window) {
+    document.documentElement.classList.add("js");
+    const revealItems = document.querySelectorAll(
+      ".panel, .project-card, .experience-card, .education-card, .skill-card, .cert-card"
+    );
+    const observer = new IntersectionObserver(
+      (entries, activeObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          activeObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08 }
+    );
+    revealItems.forEach((item) => {
+      item.classList.add("reveal");
+      observer.observe(item);
+    });
+  }
 })();

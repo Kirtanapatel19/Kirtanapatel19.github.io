@@ -7,7 +7,7 @@
 window.PORTFOLIO_DATA = {
   meta: {
     name: "Kirtana Patel",
-    title: "Business Analyst | Financial Modeling, Treasury Analytics & Investment Research",
+    title: "Financial Analysis | FP&A | Investment Research",
     valueStatement: "Finance and analytics professional translating financial data, risk signals, and operating workflows into decision-ready insights.",
     tagline: "Focused on valuation, portfolio strategy, reporting automation, and capital markets analysis.",
     location: "New Jersey, United States",
@@ -32,7 +32,8 @@ window.PORTFOLIO_DATA = {
 
   projects: [
     {
-      title: "Costco Fixed Income Credit Analysis | STRONG BUY",
+      title: "Costco Fixed Income Credit Analysis",
+      verdict: "Strong Buy",
       decisionImpact:
         "Conducted credit and relative value analysis of Costco's Aa3/AA senior notes and issued a STRONG BUY recommendation.",
       reportLink: "./Costco_Credit_Report_Akash_Kirtana_RP4.pdf",
@@ -63,7 +64,8 @@ window.PORTFOLIO_DATA = {
       },
     },
     {
-      title: "Financial Airline Industry Panel Analysis | Comparative Investment Signal",
+      title: "Financial Airline Industry Panel Analysis",
+      verdict: "Comparative Investment Signal",
       decisionImpact:
         "Evaluated 12 quarters of revenue, operating margins, and profitability across UAL, JBLU, and SKYW to identify relative operating quality.",
       skills: [
@@ -95,7 +97,7 @@ window.PORTFOLIO_DATA = {
 
   experience: [
     {
-      role: "Business Analyst",
+      role: "Financial Analyst",
       company: "Citizens Financial Group | New Jersey",
       period: "Jan 2026 - Present",
       contribution:

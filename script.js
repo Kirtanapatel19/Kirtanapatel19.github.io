@@ -94,7 +94,9 @@
 
       const header = document.createElement("header");
       header.className = "project-header";
-      header.innerHTML = `<h3 class="project-title">${project.title}</h3>`;
+      header.innerHTML = `<h3 class="project-title">${project.title}</h3>${
+        project.verdict ? `<p class="project-verdict">${project.verdict}</p>` : ""
+      }`;
       card.appendChild(header);
 
       const impact = document.createElement("p");

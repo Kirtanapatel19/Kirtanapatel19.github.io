@@ -191,8 +191,16 @@ window.PORTFOLIO_DATA = {
       name: "Forage Job Simulations",
       issuer: "Forage",
       status: "Completed - Freshfields: U.S. Capital Markets; Fidelity International: Investment Management",
-      certificateLink: "./Freshfields_US_Capital_Markets_Certificate.pdf",
-      linkLabel: "View Freshfields Certificate",
+      credentialLinks: [
+        {
+          label: "Freshfields - U.S. Capital Markets",
+          href: "./Freshfields_US_Capital_Markets_Certificate.pdf",
+        },
+        {
+          label: "Fidelity International - Investment Management",
+          href: "./Fidelity_Investment_Management_Certificate.pdf",
+        },
+      ],
     },
   ],
 

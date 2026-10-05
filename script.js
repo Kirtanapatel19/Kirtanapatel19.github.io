@@ -240,6 +240,20 @@
         link.textContent = cert.linkLabel || "View Credential";
         card.appendChild(link);
       }
+      if (cert.credentialLinks?.length) {
+        const links = document.createElement("div");
+        links.className = "certificate-links";
+        cert.credentialLinks.forEach((credential) => {
+          const link = document.createElement("a");
+          link.className = "certificate-link";
+          link.href = credential.href;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.textContent = credential.label;
+          links.appendChild(link);
+        });
+        card.appendChild(links);
+      }
       certGrid.appendChild(card);
     });
   }

@@ -155,6 +155,8 @@ h2 { font-size: clamp(2.15rem, 4.1vw, 4rem); }
 .cert-status { margin-top: auto; }
 .certificate-link { width: fit-content; margin-top: 14px; color: var(--ink); font-size: 0.76rem; font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; }
 .certificate-link:hover { color: var(--gold); }
+.certificate-links { display: grid; gap: 8px; margin-top: 14px; }
+.certificate-links .certificate-link { margin-top: 0; }
 
 .contact-panel { display: block; width: min(100%, 720px); margin-right: auto; margin-left: auto; padding: 28px 34px; background: var(--gold) !important; border-color: var(--gold); }
 .contact-panel .section-heading { display: block; margin: 0 0 20px; }

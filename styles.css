@@ -144,8 +144,8 @@ h2 { font-size: clamp(2.15rem, 4.1vw, 4rem); }
 .skill-card { min-height: 240px; padding: 25px; border: 1px solid var(--line); background: var(--cream); transition: transform var(--ease), box-shadow var(--ease); }
 .skill-list { margin: 15px 0 0; padding-left: 18px; }
 .skill-list li { margin-bottom: 8px; }
-#skills .skills-grid { grid-template-columns: 1fr; }
-#skills .skill-card { min-height: auto; }
+#skills .skills-grid { max-width: 720px; grid-template-columns: 1fr; }
+#skills .skill-card { min-height: auto; padding: 18px 21px; }
 #skills .skill-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 28px; padding-left: 18px; }
 #skills .skill-list li { margin: 0; }
 .certifications-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
@@ -153,14 +153,16 @@ h2 { font-size: clamp(2.15rem, 4.1vw, 4rem); }
 .cert-card:hover { background: var(--cream); }
 .cert-name { font-size: 1.22rem; }
 .cert-status { margin-top: auto; }
+.certificate-link { width: fit-content; margin-top: 14px; color: var(--ink); font-size: 0.76rem; font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; }
+.certificate-link:hover { color: var(--gold); }
 
-.contact-panel { display: grid; grid-template-columns: minmax(250px, 0.85fr) 1.15fr; column-gap: 80px; align-items: start; background: var(--gold) !important; border-color: var(--gold); }
-.contact-panel .section-heading { display: block; margin: 0; }
+.contact-panel { display: block; width: min(100%, 900px); margin-right: auto; margin-left: auto; padding: 28px 34px; background: var(--gold) !important; border-color: var(--gold); }
+.contact-panel .section-heading { display: block; margin: 0 0 20px; }
 .contact-panel .section-number { margin-bottom: 16px; color: rgba(16,37,63,0.65); }
-.contact-minimal { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(16,37,63,0.28); }
+.contact-minimal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(16,37,63,0.28); }
 .contact-minimal li { padding: 15px 4px; border-bottom: 1px solid rgba(16,37,63,0.28); font-size: 0.92rem; }
 .contact-minimal li:nth-child(odd) { padding-right: 14px; }
-.contact-minimal a { display: block; margin-top: 4px; color: var(--ink); font-weight: 700; text-decoration: none; }
+.contact-minimal a { display: block; margin-top: 4px; overflow-wrap: anywhere; color: var(--ink); font-size: 0.8rem; font-weight: 700; text-decoration: none; }
 .contact-minimal a:hover { text-decoration: underline; }
 .site-footer { padding: 20px; text-align: center; }
 #footer-line { color: var(--copy-muted); font: 400 0.7rem var(--font-mono); letter-spacing: 0.05em; }

@@ -73,6 +73,7 @@
   setHref("phone-text-link", `tel:${(data.meta.phone || "").replace(/[^\d+]/g, "")}`);
   setText("phone-text-link", data.meta.phone);
   setHref("linkedin-link", data.meta.linkedin);
+  setText("linkedin-link", data.meta.linkedin);
 
   // Analytical approach
   setText("approach-intro", data.analyticalApproach?.intro);
@@ -230,6 +231,15 @@
         <p class="cert-issuer">${cert.issuer || ""}</p>
         <p class="cert-status">${cert.status}</p>
       `;
+      if (cert.certificateLink) {
+        const link = document.createElement("a");
+        link.className = "certificate-link";
+        link.href = cert.certificateLink;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = cert.linkLabel || "View Credential";
+        card.appendChild(link);
+      }
       certGrid.appendChild(card);
     });
   }

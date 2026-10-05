@@ -144,7 +144,7 @@ h2 { font-size: clamp(2.15rem, 4.1vw, 4rem); }
 .skill-card { min-height: 240px; padding: 25px; border: 1px solid var(--line); background: var(--cream); transition: transform var(--ease), box-shadow var(--ease); }
 .skill-list { margin: 15px 0 0; padding-left: 18px; }
 .skill-list li { margin-bottom: 8px; }
-#skills .skills-grid { max-width: 720px; grid-template-columns: 1fr; }
+#skills .skills-grid { grid-template-columns: 1fr; }
 #skills .skill-card { min-height: auto; padding: 18px 21px; }
 #skills .skill-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 28px; padding-left: 18px; }
 #skills .skill-list li { margin: 0; }

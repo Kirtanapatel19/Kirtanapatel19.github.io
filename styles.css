@@ -158,7 +158,7 @@ h2 { font-size: clamp(2.15rem, 4.1vw, 4rem); }
 .certificate-links { display: grid; gap: 8px; margin-top: 14px; }
 .certificate-links .certificate-link { margin-top: 0; }
 
-.contact-panel { display: block; width: min(100%, 720px); margin-right: auto; margin-left: auto; padding: 28px 34px; background: var(--gold) !important; border-color: var(--gold); }
+.contact-panel { display: block; width: 100%; margin-right: auto; margin-left: auto; padding: 28px 34px; background: var(--gold) !important; border-color: var(--gold); }
 .contact-panel .section-heading { display: block; margin: 0 0 20px; }
 .contact-panel .section-number { margin-bottom: 16px; color: rgba(16,37,63,0.65); }
 .contact-minimal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(16,37,63,0.28); }

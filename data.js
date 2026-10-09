@@ -86,7 +86,7 @@ window.PORTFOLIO_DATA = {
     {
       role: "Financial Analyst",
       company: "Citizens Financial Group | New Jersey",
-      period: "Jan 2026 - Present",
+      period: "June 2026 - Aug 2026",
       contribution:
         "Built multi-scenario Excel models, Power BI dashboards, and SQL-based reconciliation workflows supporting financial performance, risk, cost-of-capital tracking, P&L reporting, and Treasury liquidity platform delivery.",
       skillsDeveloped: [

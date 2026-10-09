@@ -129,7 +129,7 @@ h2 { font-size: clamp(2.15rem, 4.1vw, 4rem); }
 .experience-card { padding: 23px 20px 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .experience-card:first-child { padding-left: 0; }
 .experience-card:last-child { border-right: 0; }
-.experience-header { min-height: 139px; }
+.experience-header { min-height: 0; }
 .experience-role, .education-degree, .skill-category, .cert-name { font: 600 clamp(1.2rem, 1.45vw, 1.48rem)/1.1 var(--font-display); letter-spacing: -0.025em; }
 .experience-company, .education-school, .cert-issuer { margin-top: 8px; color: var(--copy-muted); font-size: 0.86rem; }
 .experience-period, .education-period, .cert-status { margin-top: 10px; color: var(--gold); font: 500 0.68rem var(--font-mono); letter-spacing: 0.07em; text-transform: uppercase; }

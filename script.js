@@ -92,14 +92,24 @@
       header.innerHTML = `<h3 class="project-title">${project.title}</h3>${
         project.verdict ? `<p class="project-verdict">${project.verdict}</p>` : ""
       }`;
-      card.appendChild(header);
 
       if (project.coAuthor) {
         const coAuthor = document.createElement("p");
         coAuthor.className = "project-coauthor";
         coAuthor.textContent = project.coAuthor;
-        card.appendChild(coAuthor);
+        header.appendChild(coAuthor);
       }
+
+      if (project.reportLink) {
+        const reportLink = document.createElement("a");
+        reportLink.className = "project-file-link";
+        reportLink.href = project.reportLink;
+        reportLink.target = "_blank";
+        reportLink.rel = "noopener";
+        reportLink.textContent = project.reportLabel || "View Project File";
+        header.appendChild(reportLink);
+      }
+      card.appendChild(header);
 
       const result = document.createElement("section");
       result.className = "project-result";
@@ -117,16 +127,6 @@
           metrics.appendChild(item);
         });
         card.appendChild(metrics);
-      }
-
-      if (project.reportLink) {
-        const reportLink = document.createElement("a");
-        reportLink.className = "project-file-link";
-        reportLink.href = project.reportLink;
-        reportLink.target = "_blank";
-        reportLink.rel = "noopener";
-        reportLink.textContent = project.reportLabel || "View Project File";
-        card.appendChild(reportLink);
       }
 
       if (project.skills && project.skills.length) {

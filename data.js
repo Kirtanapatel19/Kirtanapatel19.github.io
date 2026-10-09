@@ -56,6 +56,8 @@ window.PORTFOLIO_DATA = {
     {
       title: "U.S. Airline Operating Analysis",
       verdict: "Comparative Investment Signal",
+      reportLink: "./Airline_Operating_Analysis_Report.pdf",
+      reportLabel: "View Project Report (PDF)",
       result:
         "Compared 12 quarters of revenue, operating margins, and profitability across three U.S. airlines to evaluate relative operating quality and identify differences in business performance.",
       keyTakeaway:

@@ -26,7 +26,7 @@ window.PORTFOLIO_DATA = {
 
   projects: [
     {
-      title: "Costco Senior Notes Credit Analysis",
+      title: "Costco Fixed Income Credit Analysis",
       verdict: "Strong Buy",
       coAuthor: "Co-authored with Akash",
       reportLink: "./Costco_Credit_Report_Akash_Kirtana_RP4.pdf",
@@ -54,7 +54,7 @@ window.PORTFOLIO_DATA = {
       ],
     },
     {
-      title: "U.S. Airline Operating Analysis",
+      title: "Financial Airline Industry Panel Analysis",
       verdict: "Comparative Investment Signal",
       reportLink: "./Airline_Operating_Analysis_Report.pdf",
       reportLabel: "View Project Report (PDF)",

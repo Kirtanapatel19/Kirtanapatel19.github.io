@@ -15,7 +15,7 @@ window.PORTFOLIO_DATA = {
     email: "kvp80@scarletmail.rutgers.edu",
     phone: "+1 (732) 858-4979",
     linkedin: "https://www.linkedin.com/in/kirtanavagminpatel",
-    resumeLink: "./Kirtana_Patel_Resume_Oct_2026.pdf",
+    resumeLink: "./Kirtana_Patel_Final_Resume.pdf",
     footerNote: "Kirtana Patel | Financial Analyst Portfolio",
   },
 
@@ -84,11 +84,11 @@ window.PORTFOLIO_DATA = {
 
   experience: [
     {
-      role: "Financial Analyst",
+      role: "Business Analyst",
       company: "Citizens Financial Group | New Jersey",
       period: "June 2026 - Aug 2026",
       contribution:
-        "Built multi-scenario Excel models, Power BI dashboards, and SQL-based reconciliation workflows supporting financial performance, risk, cost-of-capital tracking, P&L reporting, and Treasury liquidity platform delivery.",
+        "Used SQL and Excel to extract, validate, and reconcile data for month end P&L reporting and audit requests, investigated variances against internal thresholds, and supported multi scenario Excel models with sensitivity analysis across a $500M+ portfolio.",
       skillsDeveloped: [
         "Financial Modeling",
         "Power BI Reporting",
@@ -103,7 +103,7 @@ window.PORTFOLIO_DATA = {
       company: "Pesapal | Kenya",
       period: "June 2024 - Mar 2025",
       contribution:
-        "Documented Treasury Management System requirements, analyzed settlement failures and reconciliation breaks, mapped current and future-state workflows, and created Tableau dashboards for SLA adherence, trade error rates, and cost-per-transaction metrics.",
+        "Investigated settlement failures and reconciliation breaks across Bloomberg Terminal and OMS data, resolving more than $8M in exceptions. Built Tableau dashboards to track operational KPIs, SLA adherence, and trade error rates, and developed process documentation and SOPs that helped reduce invoice processing time by about 25%.",
       skillsDeveloped: [
         "Business Requirements",
         "Root-Cause Analysis",
@@ -114,11 +114,11 @@ window.PORTFOLIO_DATA = {
         "Operational finance decisions improve when process maps, stakeholder requirements, and exception analysis are tied directly to measurable control and efficiency outcomes.",
     },
     {
-      role: "Finance Associate Intern Analyst",
+      role: "Finance Associate Intern",
       company: "I&M Bank | Kenya",
       period: "Oct 2023 - May 2024",
       contribution:
-        "Analyzed financial data, prepared management reports, supported budgeting and expense reconciliation, reviewed daily financial documents, and gained exposure to treasury and money market operations.",
+        "Prepared recurring financial and management reports in Excel, supported budgeting and expense reconciliation, prepared and reviewed daily income statements, balance sheets, and liquidity reports, and performed data validation and documentation checks.",
       skillsDeveloped: [
         "Budgeting",
         "Expense Reconciliation",
